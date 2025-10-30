@@ -9,6 +9,10 @@
   <meta name="author" content="Eschocolat" />
   <meta name="theme-color" content="#f8fafc" />
   <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
   <style>
     /* reset.css */
 
@@ -126,10 +130,73 @@
       box-sizing: border-box;
     }
 
+    @font-face {
+      font-family: 'Suit';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Thin.woff2') format('woff2');
+      font-weight: 100;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Suit';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-ExtraLight.woff2') format('woff2');
+      font-weight: 200;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Suit';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Light.woff2') format('woff2');
+      font-weight: 300;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Suit';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+      font-weight: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Suit';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+      font-weight: 500;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Suit';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-SemiBold.woff2') format('woff2');
+      font-weight: 600;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Suit';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Bold.woff2') format('woff2');
+      font-weight: 700;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Suit';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-ExtraBold.woff2') format('woff2');
+      font-weight: 800;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Suit';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Heavy.woff2') format('woff2');
+      font-weight: 900;
+      font-display: swap;
+    }
+
     html,
     body {
       margin: 0;
-      font-family: ui-sans-serif, system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+      font-family: "Suit", ui-sans-serif, system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
       line-height: 1.6;
       color: var(--text);
       height: auto;
@@ -181,7 +248,7 @@
       color: var(--brand-hover);
       border-radius: 999px;
       font-size: 11.5px;
-      letter-spacing: .04em;
+      letter-spacing: -.02em;
     }
 
     h1.title {
@@ -194,6 +261,7 @@
       color: var(--muted);
       margin: 0 auto 18px;
       max-width: 44rem;
+      word-break: keep-all;
     }
 
     .icons {
@@ -230,8 +298,9 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 10px;
-      margin-top: 22px;
+      column-gap: 22px;
+      row-gap: 26px;
+      margin-top: 32px;
     }
 
     .avatar {
@@ -243,7 +312,7 @@
       display: block;
       border: 2px solid rgba(255, 255, 255, 0.7);
       box-shadow:
-        0 0 0 4px rgba(255, 75, 76, 0.1),
+        0 0 0 3px rgba(255, 75, 76, 0.1),
         0 6px 20px rgba(0, 0, 0, 0.1),
         0 0 30px rgba(255, 75, 76, 0.2);
       transition: transform 0.35s ease, box-shadow 0.35s ease;
@@ -252,7 +321,7 @@
     .avatar:hover {
       transform: scale(1.1);
       box-shadow:
-        0 0 0 6px rgba(255, 75, 76, 0.05),
+        0 0 0 4px rgba(255, 75, 76, 0.05),
         0 8px 24px rgba(0, 0, 0, 0.1),
         0 0 40px rgba(255, 75, 76, 0.15);
     }
@@ -307,7 +376,7 @@
     }
 
     .mono {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-family: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     }
 
     .subtitle {
@@ -358,7 +427,7 @@
   <div class="layout">
     <main class="shell" aria-label="jihoon 소개">
       <div>
-        <span class="badge">jihoon · software / writing</span>
+        <span class="badge mono">jihoon · software / writing</span>
       </div>
       <img class="avatar" src="profile.jpg" alt="eschocolat" />
       <p class="subtitle">
@@ -366,8 +435,8 @@
       </p>
       <h1 class="title">안녕하세요, <span class="brand-color">Eschocolat</span> 입니다.</h1>
       <p class="sub">
-        소프트웨어 엔지니어입니다. Typescript로 만들고, 글로 정리합니다.
-        이 페이지는 저를 간단히 소개하고, 블로그, 개인 링크 등 여러 페이지로 연결해줍니다.
+        소프트웨어 엔지니어입니다. 글을 쓰고, 취향을 만들고, 영감을 얻고, 나다움을 매일 기록하려 합니다.
+        이 페이지는 앞으로 채워나갈 저만의 공간입니다. 저를 간단히 소개하고, 저와 관련된 어딘가로 연결해줍니다.
       </p>
 
       <div class="icons" aria-label="Social links">
@@ -399,7 +468,7 @@
         <a class="btn" href="https://blog.eschocolat.dev/now" target="_blank" rel="noreferrer">Now 페이지 ↗</a>
       </div>
 
-      <div class="cta" style="margin-top:20px">
+      <div class="cta" style="margin-top:26px">
         <a class="btn" href="mailto:eschocolat.lee@gmail.com">이메일 보내기</a>
       </div>
 
@@ -407,8 +476,8 @@
         <div class="mono">© <span id="year"></span> jihoon · <a
             href="mailto:eschocolat.lee@gmail.com">eschocolat.lee@gmail.com</a>
         </div>
-        <div><a href="https://blog.eschocolat.dev" target="_blank">Blog</a> · <a href="https://blog.eschocolat.dev/now"
-            target="_blank">Now</a></div>
+        <div class="mono"><a href="https://blog.eschocolat.dev" target="_blank">Blog</a> · <a
+            href="https://blog.eschocolat.dev/now" target="_blank">Now</a></div>
       </footer>
     </main>
   </div>
