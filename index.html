@@ -1084,6 +1084,46 @@
       });
     }
 
+    /* live posts — latest writing from EsLog (Ghost Content API).
+       On any failure the hardcoded slips above stay as fallback. */
+    (function () {
+      var grid = document.querySelector('.slips');
+      if (!grid || !window.fetch) return;
+      var API = 'https://blog.eschocolat.dev/ghost/api/content/posts/'
+        + '?key=8ac71b45de92764dc2176bc939'
+        + '&limit=4&fields=title,url&order=published_at%20desc';
+      fetch(API, { headers: { 'Accept-Version': 'v6.0' } })
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+        .then(function (data) {
+          var posts = (data.posts || []).filter(function (p) { return p.title && p.url; });
+          if (!posts.length) return;
+          var tilts = [-1.6, 1.4, 1.8, -1.2];
+          grid.innerHTML = '';
+          posts.slice(0, 4).forEach(function (p, i) {
+            var a = document.createElement('a');
+            a.className = 'slip';
+            a.href = p.url;
+            a.target = '_blank';
+            a.rel = 'noreferrer';
+            a.style.setProperty('--rt', tilts[i % tilts.length] + 'deg');
+            var t = document.createElement('strong');
+            t.textContent = p.title;
+            var meta = document.createElement('span');
+            meta.className = 'slip-meta';
+            var src = document.createElement('span');
+            src.textContent = 'ESLOG';
+            var go = document.createElement('span');
+            go.textContent = '읽기 →';
+            meta.appendChild(src);
+            meta.appendChild(go);
+            a.appendChild(t);
+            a.appendChild(meta);
+            grid.appendChild(a);
+          });
+        })
+        .catch(function () { /* keep static fallback */ });
+    })();
+
     /* marine snow + ambient bubbles (canvas) */
     if (!reduced) {
       var cv = document.getElementById('water');
