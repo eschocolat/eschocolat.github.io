@@ -14,11 +14,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Eschocolat — 몰입하여 더욱 가치 있게</title>
-  <meta name="description" content="소프트웨어 엔지니어 jihoon의 공간. 코드를 쓰고 글을 쓰며, 취향과 나다움을 매일 기록합니다." />
+  <meta name="description" content="Eschocolat — 소프트웨어 엔지니어 jihoon. 조각을 떼어 보세요." />
   <meta name="author" content="Eschocolat" />
   <meta name="theme-color" content="#211410" />
   <meta property="og:title" content="Eschocolat — 몰입하여 더욱 가치 있게" />
-  <meta property="og:description" content="소프트웨어 엔지니어 jihoon의 공간. 코드를 쓰고 글을 쓰며, 취향과 나다움을 매일 기록합니다." />
+  <meta property="og:description" content="소프트웨어 엔지니어 jihoon. 조각을 떼어 보세요." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.eschocolat.dev" />
   <meta property="og:image" content="https://www.eschocolat.dev/Eschocolat.png" />
@@ -28,18 +28,9 @@
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍫</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Space+Mono:wght@400;700&display=swap"
     rel="stylesheet">
   <style>
-    /* ---------- fonts ---------- */
-    @font-face {
-      font-family: 'Suit';
-      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
-      font-weight: 400;
-      font-display: swap;
-    }
-
     @font-face {
       font-family: 'Suit';
       src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
@@ -54,37 +45,20 @@
       font-display: swap;
     }
 
-    @font-face {
-      font-family: 'Suit';
-      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-ExtraBold.woff2') format('woff2');
-      font-weight: 800;
-      font-display: swap;
-    }
-
-    /* ---------- tokens ---------- */
     :root {
       --cacao: #211410;
-      /* page ground — deep cacao */
-      --cacao-2: #2a1a13;
-      /* raised panel */
       --bar: #3a2416;
-      /* chocolate bar surface */
       --bar-hi: #4b2f1c;
+      --tray: #1a0f0b;
       --cream: #f3e7d7;
-      /* primary text */
       --cream-dim: #c8b3a1;
-      /* secondary text */
       --hairline: rgba(243, 231, 215, .14);
       --coral: #ff4b4c;
-      /* brand accent (wordmark red) */
-      --coral-deep: #e13b3c;
       --serif: 'Gowun Batang', 'Nanum Myeongjo', georgia, serif;
       --sans: 'Suit', ui-sans-serif, system-ui, -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
       --mono: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
-      --w: 1020px;
     }
 
-    /* ---------- base ---------- */
     *,
     *::before,
     *::after {
@@ -93,35 +67,33 @@
       padding: 0;
     }
 
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 84px;
+    html,
+    body {
+      height: 100%;
     }
 
     body {
       background: var(--cacao);
       color: var(--cream);
       font-family: var(--sans);
-      line-height: 1.7;
-      letter-spacing: -.01em;
-      -webkit-font-smoothing: antialiased;
+      font-weight: 500;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
       overflow-x: hidden;
+      overflow-y: auto;
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* faint wrapper-paper grain over everything */
+    /* wrapper-paper grain */
     body::after {
       content: "";
       position: fixed;
       inset: 0;
-      z-index: 60;
+      z-index: 40;
       pointer-events: none;
       opacity: .05;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
     }
 
     a {
@@ -129,18 +101,12 @@
       text-decoration: none;
     }
 
-    ul {
-      list-style: none;
-    }
-
-    .mono {
-      font-family: var(--mono);
-    }
-
-    .container {
-      max-width: var(--w);
-      margin: 0 auto;
-      padding: 0 24px;
+    button {
+      font: inherit;
+      color: inherit;
+      background: none;
+      border: 0;
+      cursor: pointer;
     }
 
     ::selection {
@@ -151,791 +117,389 @@
     :focus-visible {
       outline: 2px solid var(--coral);
       outline-offset: 3px;
-      border-radius: 4px;
+      border-radius: 8px;
     }
 
-    /* ---------- header ---------- */
-    .site-head {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(33, 20, 16, .78);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--hairline);
-    }
-
-    .site-head .container {
+    /* ---------- stage ---------- */
+    main {
+      flex: 1;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
-      height: 60px;
+      justify-content: center;
+      gap: clamp(18px, 3.4vh, 34px);
+      padding: 24px 20px 8px;
+      min-height: 0;
     }
 
-    .head-logo img {
-      height: 17px;
+    .mark {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      opacity: 0;
+      animation: rise .8s ease .1s forwards;
+    }
+
+    .mark img {
+      height: clamp(26px, 4.2vh, 36px);
       width: auto;
     }
 
-    .head-nav {
-      display: flex;
-      gap: 26px;
-      font-family: var(--mono);
-      font-size: 12.5px;
-      color: var(--cream-dim);
-    }
-
-    .head-nav a:hover {
-      color: var(--coral);
-    }
-
-    /* ---------- hero ---------- */
-    .hero {
-      padding: 92px 0 110px;
-    }
-
-    .hero .container {
-      display: grid;
-      grid-template-columns: 1.04fr .96fr;
-      gap: 56px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      font-family: var(--mono);
-      font-size: 12px;
-      letter-spacing: .22em;
-      color: var(--coral);
-      text-transform: uppercase;
-    }
-
-    .hero h1 {
+    .tagline {
       font-family: var(--serif);
       font-weight: 700;
-      font-size: clamp(34px, 4.6vw, 52px);
-      line-height: 1.32;
-      letter-spacing: -.015em;
-      margin: 18px 0 22px;
-      word-break: keep-all;
-    }
-
-    .hero h1 .dot {
-      color: var(--coral);
-    }
-
-    .hero-sub {
+      font-size: clamp(15px, 2.3vh, 19px);
+      letter-spacing: .01em;
       color: var(--cream-dim);
-      font-size: 16.5px;
-      max-width: 30rem;
       word-break: keep-all;
+      text-align: center;
     }
 
-    .hero-cta {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 14px;
-      margin-top: 34px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 700;
-      font-size: 14.5px;
-      padding: 12px 22px;
-      border-radius: 999px;
-      border: 1px solid var(--hairline);
-      color: var(--cream);
-      transition: transform .18s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      border-color: rgba(243, 231, 215, .34);
-    }
-
-    .btn-primary {
-      background: var(--coral);
-      border-color: var(--coral);
-      color: #241511;
-      font-weight: 800;
-      box-shadow: 0 10px 30px rgba(255, 75, 76, .22);
-    }
-
-    .btn-primary:hover {
-      background: var(--coral-deep);
-      border-color: var(--coral-deep);
-      box-shadow: 0 14px 36px rgba(255, 75, 76, .3);
-    }
-
-    .hero-social {
-      display: flex;
-      gap: 10px;
-      margin-left: 4px;
-    }
-
-    .icon-btn {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      border: 1px solid var(--hairline);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--cream-dim);
-      transition: transform .18s ease, color .18s ease, border-color .18s ease;
-    }
-
-    .icon-btn:hover {
-      transform: translateY(-2px);
-      color: var(--coral);
-      border-color: rgba(255, 75, 76, .5);
-    }
-
-    /* ---------- the chocolate bar ---------- */
-    .bar-scene {
-      display: flex;
-      justify-content: center;
-      perspective: 900px;
+    .scene {
+      perspective: 1100px;
+      opacity: 0;
+      animation: rise .8s ease .25s forwards;
     }
 
     .bar {
       position: relative;
-      width: min(100%, 430px);
-      padding: 16px;
+      transform-style: preserve-3d;
+      transform: rotate(-2deg);
+      padding: clamp(12px, 1.8vh, 16px);
       border-radius: 18px;
       background: linear-gradient(160deg, var(--bar-hi), var(--bar) 55%, #2e1c11);
       box-shadow:
         0 40px 70px rgba(0, 0, 0, .5),
         0 12px 24px rgba(0, 0, 0, .35),
         inset 0 1px 0 rgba(243, 231, 215, .1);
-      transform: rotate(-3.5deg);
     }
 
-    .bar-grid {
+    .grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 7px;
+      gap: clamp(6px, 1vh, 8px);
     }
 
-    .piece {
+    .slot {
+      position: relative;
+      width: min(clamp(64px, 11.5vh, 96px), 20vw);
       aspect-ratio: 1;
-      border-radius: 9px;
-      background: linear-gradient(150deg, #46301e, #33200f 70%);
-      box-shadow:
-        inset 2px 2px 3px rgba(245, 230, 210, .10),
-        inset -3px -4px 7px rgba(0, 0, 0, .5);
+      border-radius: 10px;
+      background: var(--tray);
+      box-shadow: inset 0 3px 8px rgba(0, 0, 0, .55);
+    }
+
+    /* word hiding under a piece */
+    .slot::after {
+      content: attr(data-under);
+      position: absolute;
+      inset: 0;
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: var(--serif);
-      font-size: 26px;
       font-weight: 700;
-      color: rgba(0, 0, 0, .34);
-      text-shadow: 0 1px 0 rgba(255, 236, 214, .12);
-      transition: transform .22s cubic-bezier(.34, 1.56, .64, 1);
+      font-size: clamp(15px, 2.4vh, 20px);
+      color: var(--cream-dim);
+      opacity: 0;
+      transform: translateY(4px);
+      transition: opacity .5s ease .45s, transform .5s ease .45s;
+      pointer-events: none;
     }
 
-    .piece:hover {
-      transform: translateY(-6px) rotate(-2deg);
+    .slot.broken::after {
+      opacity: .92;
+      transform: none;
     }
 
-    .piece-broken {
-      transform: translate(22%, 30%) rotate(11deg);
+    .piece {
+      position: absolute;
+      inset: 0;
+      border-radius: 10px;
+      background: linear-gradient(150deg, #46301e, #33200f 70%);
       box-shadow:
         inset 2px 2px 3px rgba(245, 230, 210, .10),
         inset -3px -4px 7px rgba(0, 0, 0, .5),
-        0 14px 22px rgba(0, 0, 0, .45);
-    }
-
-    .piece-broken:hover {
-      transform: translate(0, 0) rotate(0deg);
-    }
-
-    /* paper band around the bar */
-    .band {
-      position: absolute;
-      left: -5.5%;
-      right: -5.5%;
-      top: 50%;
-      transform: translateY(-50%) rotate(-1.6deg);
-      background: var(--coral);
-      border-radius: 4px;
-      padding: 16px 10px 14px;
-      text-align: center;
-      box-shadow: 0 14px 30px rgba(0, 0, 0, .4);
-    }
-
-    .band img {
-      height: 30px;
-      width: auto;
-      margin: 0 auto 6px;
-      filter: brightness(0) invert(1);
-      opacity: .96;
-    }
-
-    .band-note {
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: .18em;
-      color: rgba(36, 21, 17, .85);
-      font-weight: 700;
-    }
-
-    /* ---------- sections ---------- */
-    .section {
-      padding: 92px 0;
-      border-top: 1px solid var(--hairline);
-    }
-
-    .sec-head {
-      margin-bottom: 44px;
-    }
-
-    .sec-head h2 {
-      font-family: var(--serif);
-      font-weight: 700;
-      font-size: clamp(26px, 3.2vw, 34px);
-      margin-top: 12px;
-      word-break: keep-all;
-    }
-
-    .sec-desc {
-      color: var(--cream-dim);
-      margin-top: 12px;
-      max-width: 34rem;
-      word-break: keep-all;
-    }
-
-    /* ingredients */
-    .ing-row {
-      display: grid;
-      grid-template-columns: 200px 1fr auto;
-      gap: 24px;
-      align-items: baseline;
-      padding: 26px 4px;
-      border-top: 1px solid var(--hairline);
-    }
-
-    .ing-row:last-child {
-      border-bottom: 1px solid var(--hairline);
-    }
-
-    .ing-name {
-      font-family: var(--serif);
-      font-size: 23px;
-      font-weight: 700;
-    }
-
-    .ing-name small {
-      display: block;
-      font-family: var(--mono);
-      font-size: 10.5px;
-      letter-spacing: .2em;
-      color: var(--cream-dim);
-      margin-top: 4px;
-      text-transform: uppercase;
-    }
-
-    .ing-desc {
-      color: var(--cream-dim);
-      font-size: 15.5px;
-      max-width: 34rem;
-      word-break: keep-all;
-    }
-
-    .ing-tag {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: .12em;
-      color: var(--coral);
-      border: 1px solid rgba(255, 75, 76, .4);
-      border-radius: 999px;
-      padding: 4px 12px;
-      white-space: nowrap;
-    }
-
-    /* writing */
-    .post-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .post-card {
+        0 2px 4px rgba(0, 0, 0, .3);
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 34px;
-      min-height: 168px;
-      padding: 26px 26px 22px;
-      border: 1px solid var(--hairline);
-      border-radius: 16px;
-      background: var(--cacao-2);
-      transition: transform .2s ease, border-color .2s ease;
-    }
-
-    .post-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(255, 75, 76, .55);
-    }
-
-    .post-card h3 {
-      font-family: var(--serif);
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 1.5;
-      word-break: keep-all;
-    }
-
-    .post-meta {
-      display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: center;
+      transform: translateZ(10px);
+      transition: transform .25s cubic-bezier(.34, 1.56, .64, 1), box-shadow .25s ease;
+      will-change: transform;
+    }
+
+    .piece:hover {
+      transform: translateZ(26px);
+      box-shadow:
+        inset 2px 2px 3px rgba(245, 230, 210, .10),
+        inset -3px -4px 7px rgba(0, 0, 0, .5),
+        0 14px 24px rgba(0, 0, 0, .45);
+    }
+
+    /* stamped glyph on plain pieces */
+    .piece .stamp {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: clamp(20px, 3.4vh, 28px);
+      color: rgba(0, 0, 0, .34);
+      text-shadow: 0 1px 0 rgba(255, 236, 214, .12);
+    }
+
+    /* link pieces */
+    .piece .label {
+      font-family: var(--mono);
+      font-weight: 700;
+      font-size: clamp(9px, 1.35vh, 11px);
+      letter-spacing: .18em;
+      color: rgba(0, 0, 0, .42);
+      text-shadow: 0 1px 0 rgba(255, 236, 214, .14);
+      transition: color .2s ease;
+    }
+
+    .piece:hover .label {
+      color: var(--coral);
+      text-shadow: none;
+    }
+
+    /* breaking off */
+    .slot.broken .piece {
+      transform: translate3d(var(--dx, 0px), 130vh, 40px) rotate(var(--rot, 20deg));
+      opacity: .9;
+      transition: transform 1s cubic-bezier(.45, 0, .8, .4), opacity 1s ease;
+      pointer-events: none;
+    }
+
+    /* ---------- hint & meter ---------- */
+    .hint {
+      font-size: clamp(12.5px, 1.9vh, 14px);
+      color: var(--cream-dim);
+      text-align: center;
+      word-break: keep-all;
+      opacity: 0;
+      animation: rise .8s ease .45s forwards;
+    }
+
+    .hint .mono {
+      font-family: var(--mono);
+      font-size: .86em;
+      letter-spacing: .1em;
+      color: var(--coral);
+    }
+
+    .meter {
+      display: flex;
+      align-items: center;
+      gap: 14px;
       font-family: var(--mono);
       font-size: 11px;
       letter-spacing: .14em;
       color: var(--cream-dim);
+      min-height: 30px;
     }
 
-    .post-card:hover .post-meta .go {
-      color: var(--coral);
-    }
-
-    .more-link {
-      display: inline-block;
-      margin-top: 30px;
-      font-family: var(--mono);
-      font-size: 13px;
-      color: var(--cream-dim);
-      border-bottom: 1px solid var(--hairline);
-      padding-bottom: 3px;
-    }
-
-    .more-link:hover {
-      color: var(--coral);
-      border-color: var(--coral);
-    }
-
-    /* now */
-    .now-grid {
-      display: grid;
-      grid-template-columns: 300px 1fr;
-      gap: 52px;
-      align-items: center;
-    }
-
-    .now-photo {
-      position: relative;
-    }
-
-    .now-photo img {
-      border-radius: 16px;
-      filter: sepia(.26) contrast(1.03) brightness(.96);
+    .meter .reset {
       border: 1px solid var(--hairline);
-    }
-
-    .now-photo::after {
-      content: "EST. JIHOON";
-      position: absolute;
-      left: 14px;
-      bottom: 12px;
+      border-radius: 999px;
+      padding: 4px 14px;
       font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: .22em;
-      color: rgba(243, 231, 215, .75);
-    }
-
-    .now-copy p {
+      font-size: 11px;
+      letter-spacing: .14em;
       color: var(--cream-dim);
-      max-width: 32rem;
-      word-break: keep-all;
-      margin-top: 12px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s ease, color .2s ease, border-color .2s ease;
     }
 
-    .now-copy h2 {
-      font-family: var(--serif);
-      font-weight: 700;
-      font-size: clamp(26px, 3.2vw, 34px);
-      margin-top: 12px;
+    .meter.dirty .reset {
+      opacity: 1;
+      pointer-events: auto;
     }
 
-    .now-copy .btn {
-      margin-top: 28px;
+    .meter .reset:hover {
+      color: var(--coral);
+      border-color: rgba(255, 75, 76, .5);
     }
 
-    /* contact */
-    .contact {
-      text-align: center;
-    }
-
-    .contact h2 {
-      font-family: var(--serif);
-      font-weight: 700;
-      font-size: clamp(28px, 3.6vw, 40px);
-      margin-top: 14px;
-    }
-
-    .contact p {
-      color: var(--cream-dim);
-      margin: 14px auto 0;
-      max-width: 28rem;
-      word-break: keep-all;
-    }
-
-    .contact-cta {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 34px;
-    }
-
-    /* footer */
-    .site-foot {
-      border-top: 1px solid var(--hairline);
-      padding: 30px 0 38px;
-    }
-
-    .site-foot .container {
+    /* ---------- footer ---------- */
+    footer {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 8px;
+      padding: 14px 22px 16px;
+      border-top: 1px solid var(--hairline);
       font-family: var(--mono);
-      font-size: 12px;
+      font-size: 11px;
+      letter-spacing: .06em;
       color: var(--cream-dim);
     }
 
-    .site-foot a:hover {
+    footer nav {
+      display: flex;
+      gap: 14px;
+    }
+
+    footer a:hover {
       color: var(--coral);
     }
 
-    /* ---------- motion ---------- */
-    .reveal {
-      opacity: 0;
-      transform: translateY(16px);
-      transition: opacity .7s ease, transform .7s ease;
-    }
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
 
-    .reveal.in {
-      opacity: 1;
-      transform: none;
+      to {
+        opacity: 1;
+        transform: none;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
 
-      html {
-        scroll-behavior: auto;
-      }
-
-      .reveal {
+      .mark,
+      .scene,
+      .hint {
+        animation: none;
         opacity: 1;
-        transform: none;
-        transition: none;
       }
 
       .piece,
-      .btn,
-      .icon-btn,
-      .post-card {
+      .slot.broken .piece {
         transition: none;
       }
 
-      .piece:hover,
-      .piece-broken:hover {
-        transform: none;
+      .slot.broken .piece {
+        opacity: 0;
+        transform: translateZ(10px);
       }
 
-      .piece-broken {
-        transform: translate(22%, 30%) rotate(11deg);
-      }
-    }
-
-    /* ---------- responsive ---------- */
-    @media (max-width: 880px) {
-      .hero {
-        padding: 60px 0 84px;
-      }
-
-      .hero .container {
-        grid-template-columns: 1fr;
-        gap: 64px;
-      }
-
-      .bar-scene {
-        order: 2;
-      }
-
-      .bar {
-        width: min(100%, 360px);
-      }
-
-      .ing-row {
-        grid-template-columns: 1fr;
-        gap: 10px;
-      }
-
-      .ing-tag {
-        justify-self: start;
-      }
-
-      .post-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .post-card {
-        min-height: 0;
-        gap: 24px;
-      }
-
-      .now-grid {
-        grid-template-columns: 1fr;
-        gap: 36px;
-      }
-
-      .now-photo {
-        max-width: 320px;
-      }
-
-      .section {
-        padding: 68px 0;
+      .slot::after {
+        transition: none;
       }
     }
 
-    @media (max-width: 480px) {
-      .head-nav {
-        gap: 16px;
-        font-size: 11.5px;
-      }
-
-      .band img {
-        height: 24px;
-      }
-
-      .piece {
-        font-size: 20px;
+    @media (max-height: 640px) {
+      .slot {
+        width: min(clamp(52px, 10vh, 72px), 19vw);
       }
     }
   </style>
 </head>
 
 <body>
-  <header class="site-head">
-    <div class="container">
-      <a class="head-logo" href="#" aria-label="Eschocolat 홈">
-        <img src="Eschocolat.png" alt="Eschocolat" />
-      </a>
-      <nav class="head-nav" aria-label="페이지 내 이동">
-        <a href="#ingredients">성분</a>
-        <a href="#writing">글</a>
-        <a href="#now">지금</a>
-        <a href="#contact">연락</a>
-      </nav>
-    </div>
-  </header>
-
   <main>
-    <!-- hero -->
-    <section class="hero" aria-label="소개">
-      <div class="container">
-        <div class="hero-copy">
-          <p class="eyebrow reveal">Software Engineer · Writer</p>
-          <h1 class="reveal">몰입하여,<br />더욱 가치 있게 만드는 사람<span class="dot">.</span></h1>
-          <p class="hero-sub reveal">
-            안녕하세요, 소프트웨어 엔지니어 jihoon입니다.
-            코드를 쓰고 글을 쓰며, 취향과 나다움을 매일 기록합니다.
-            이곳은 저라는 사람을 조각조각 담아두는 작은 진열대입니다.
-          </p>
-          <div class="hero-cta reveal">
-            <a class="btn btn-primary" href="https://blog.eschocolat.dev" target="_blank" rel="noreferrer">EsLog에서 글 읽기
-              →</a>
-            <div class="hero-social" aria-label="소셜 링크">
-              <a class="icon-btn" href="https://x.com/_eschocolat" target="_blank" rel="noreferrer" aria-label="X">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M18 2h3l-7 8 8 10h-6l-5-6-6 6H2l7-8L2 2h6l5 6 5-6Z" fill="currentColor" />
-                </svg>
-              </a>
-              <a class="icon-btn" href="https://github.com/eschocolat" target="_blank" rel="noreferrer"
-                aria-label="GitHub">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path
-                    d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.8-.25.8-.57V20.3c-3.26.7-3.95-1.57-3.95-1.57-.53-1.34-1.3-1.7-1.3-1.7-1.07-.73.08-.72.08-.72 1.18.08 1.8 1.21 1.8 1.21 1.05 1.8 2.76 1.28 3.43.98.1-.77.41-1.28.75-1.57-2.6-.3-5.33-1.3-5.33-5.78 0-1.28.46-2.32 1.2-3.14-.12-.3-.52-1.5.12-3.12 0 0 .98-.31 3.2 1.2.94-.26 1.95-.4 2.96-.4s2.02.14 2.96.4c2.21-1.51 3.19-1.2 3.19-1.2.64 1.62.24 2.82.12 3.12.75.82 1.2 1.86 1.2 3.14 0 4.49-2.73 5.47-5.34 5.77.42.36.8 1.07.8 2.16v3.2c0 .32.21.67.81.56A11.5 11.5 0 0 0 12 .5Z"
-                    fill="currentColor" />
-                </svg>
-              </a>
-              <a class="icon-btn" href="https://www.linkedin.com/in/eschocolat/" target="_blank" rel="noreferrer"
-                aria-label="LinkedIn">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5Z" fill="currentColor" />
-                  <path
-                    d="M3 9h4v12H3zM10 9h4v2.4h.06c.56-1.06 1.94-2.4 3.99-2.4 4.27 0 5.06 2.8 5.06 6.44V21h-4v-5.1c0-1.22-.02-2.79-1.7-2.79-1.7 0-1.96 1.33-1.96 2.7V21h-4z"
-                    fill="currentColor" />
-                </svg>
-              </a>
-              <a class="icon-btn" href="mailto:eschocolat.lee@gmail.com" aria-label="이메일 보내기">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M3 6.5A2.5 2.5 0 0 1 5.5 4h13A2.5 2.5 0 0 1 21 6.5v11a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5v-11Zm2.3-.5 6.2 5.2a.8.8 0 0 0 1 0L18.7 6H5.3Zm13.7 1.9-5.5 4.6a2.8 2.8 0 0 1-3.6 0L4.4 7.9v9.6c0 .6.5 1 1.1 1h13c.6 0 1.1-.4 1.1-1V7.9Z"
-                    fill="currentColor" />
-                </svg>
-              </a>
-            </div>
+    <div class="mark">
+      <img src="Eschocolat.png" alt="Eschocolat" />
+      <p class="tagline">몰입하여 더욱 가치 있게 만드는 사람, jihoon.</p>
+    </div>
+
+    <div class="scene">
+      <div class="bar" id="bar" role="group" aria-label="초콜릿 바 — 조각을 떼면 열립니다">
+        <div class="grid" id="grid">
+          <div class="slot" data-under="몰입"><button class="piece" type="button" aria-label="조각 떼기"><span
+                class="stamp">Ē</span></button></div>
+          <div class="slot"><a class="piece" href="https://blog.eschocolat.dev" target="_blank" rel="noreferrer"
+              aria-label="블로그 EsLog 열기"><span class="label">BLOG</span></a></div>
+          <div class="slot"><button class="piece" type="button" aria-label="조각 떼기"><span class="stamp">Ē</span></button>
           </div>
-        </div>
+          <div class="slot"><a class="piece" href="https://x.com/_eschocolat" target="_blank" rel="noreferrer"
+              aria-label="X 프로필 열기"><span class="label">X</span></a></div>
 
-        <div class="bar-scene reveal" aria-hidden="true">
-          <div class="bar">
-            <div class="bar-grid">
-              <div class="piece">Ē</div>
-              <div class="piece">Ē</div>
-              <div class="piece">Ē</div>
-              <div class="piece">Ē</div>
-              <div class="piece">Ē</div>
-              <div class="piece">Ē</div>
-              <div class="piece">Ē</div>
-              <div class="piece">Ē</div>
-              <div class="piece">Ē</div>
-              <div class="piece">Ē</div>
-              <div class="piece">Ē</div>
-              <div class="piece piece-broken">Ē</div>
-            </div>
-            <div class="band">
-              <img src="Eschocolat.png" alt="" />
-              <div class="band-note">CACAO 100% · 몰입 · 기록 · 취향</div>
-            </div>
+          <div class="slot"><a class="piece" href="https://blog.eschocolat.dev/now" target="_blank" rel="noreferrer"
+              aria-label="Now 페이지 열기"><span class="label">NOW</span></a></div>
+          <div class="slot" data-under="기록"><button class="piece" type="button" aria-label="조각 떼기"><span
+                class="stamp">Ē</span></button></div>
+          <div class="slot"><a class="piece" href="https://github.com/eschocolat" target="_blank" rel="noreferrer"
+              aria-label="GitHub 열기"><span class="label">GITHUB</span></a></div>
+          <div class="slot" data-under="🤎"><button class="piece" type="button" aria-label="조각 떼기"><span
+                class="stamp">Ē</span></button></div>
+
+          <div class="slot"><button class="piece" type="button" aria-label="조각 떼기"><span class="stamp">Ē</span></button>
           </div>
+          <div class="slot"><a class="piece" href="https://www.linkedin.com/in/eschocolat/" target="_blank"
+              rel="noreferrer" aria-label="LinkedIn 열기"><span class="label">LINKEDIN</span></a></div>
+          <div class="slot"><a class="piece" href="mailto:eschocolat.lee@gmail.com" aria-label="이메일 보내기"><span
+                class="label">MAIL</span></a></div>
+          <div class="slot" data-under="취향"><button class="piece" type="button" aria-label="조각 떼기"><span
+                class="stamp">Ē</span></button></div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- ingredients -->
-    <section class="section" id="ingredients" aria-label="성분표 — 제가 아끼는 것들">
-      <div class="container">
-        <div class="sec-head reveal">
-          <p class="eyebrow">Ingredients</p>
-          <h2>성분표</h2>
-          <p class="sec-desc">이 사람은 대체로 다음 세 가지로 이루어져 있습니다.</p>
-        </div>
+    <p class="hint">조각을 떼어 보세요 — <span class="mono">BLOG · NOW · GITHUB</span> 조각엔 링크가 들어 있어요.</p>
 
-        <div class="ing-row reveal">
-          <div class="ing-name">몰입<small>Deep Focus</small></div>
-          <p class="ing-desc">한 가지에 깊게 잠겨, 손에 잡히는 것을 더 가치 있게 만들어내는 시간을 가장 아낍니다. 요즘은 오래 지속 가능한 몰입의 리듬을 연습하고 있습니다.</p>
-          <span class="ing-tag">100%</span>
-        </div>
-        <div class="ing-row reveal">
-          <div class="ing-name">기록<small>Writing</small></div>
-          <p class="ing-desc">매일 짧게라도 글을 남깁니다. 코드와 일과 마음에 대한 생각들이 블로그 EsLog에 쌓이는 중입니다. 나다움은 기록에서 자란다고 믿습니다.</p>
-          <span class="ing-tag">매일</span>
-        </div>
-        <div class="ing-row reveal">
-          <div class="ing-name">취향<small>Taste</small></div>
-          <p class="ing-desc">취향을 찾는 단계에서, 살아내는 단계로 옮겨가는 중입니다. 좋아하는 것을 고르는 데서 멈추지 않고 직접 만들어 표현해보려 합니다.</p>
-          <span class="ing-tag">숙성 중</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- writing -->
-    <section class="section" id="writing" aria-label="최근 쓴 글">
-      <div class="container">
-        <div class="sec-head reveal">
-          <p class="eyebrow">Tasting Notes</p>
-          <h2>글 몇 조각</h2>
-          <p class="sec-desc">블로그 EsLog에서 꺼내온 조각들입니다. 하나 집어 맛보세요.</p>
-        </div>
-
-        <div class="post-grid">
-          <a class="post-card reveal" href="https://blog.eschocolat.dev/code-is-the-translation-of-reality/"
-            target="_blank" rel="noreferrer">
-            <h3>코드는 현실의 번역이다</h3>
-            <div class="post-meta"><span>ESLOG</span><span class="go">읽기 →</span></div>
-          </a>
-          <a class="post-card reveal" href="https://blog.eschocolat.dev/the-value-of-taste/" target="_blank"
-            rel="noreferrer">
-            <h3>취향의 쓸모</h3>
-            <div class="post-meta"><span>ESLOG</span><span class="go">읽기 →</span></div>
-          </a>
-          <a class="post-card reveal" href="https://blog.eschocolat.dev/conversation-is-giving-a-place-in-your-heart/"
-            target="_blank" rel="noreferrer">
-            <h3>대화란 상대에게 마음 한 자리를 내어주는 일</h3>
-            <div class="post-meta"><span>ESLOG</span><span class="go">읽기 →</span></div>
-          </a>
-          <a class="post-card reveal" href="https://blog.eschocolat.dev/mindset-for-the-ai-era/" target="_blank"
-            rel="noreferrer">
-            <h3>AI 시대에 가져야 할 마음</h3>
-            <div class="post-meta"><span>ESLOG</span><span class="go">읽기 →</span></div>
-          </a>
-        </div>
-
-        <a class="more-link reveal" href="https://blog.eschocolat.dev" target="_blank" rel="noreferrer">모든 글 보기 —
-          blog.eschocolat.dev →</a>
-      </div>
-    </section>
-
-    <!-- now -->
-    <section class="section" id="now" aria-label="요즘의 근황">
-      <div class="container now-grid">
-        <div class="now-photo reveal">
-          <img src="profile.jpg" alt="jihoon의 프로필 사진" />
-        </div>
-        <div class="now-copy reveal">
-          <p class="eyebrow">Now</p>
-          <h2>요즘의 저는</h2>
-          <p>
-            완벽함보다 균형과 회복의 리듬을 아끼며, 건강하게 오래 가는 사람이 되는 연습을 하고 있습니다.
-            찾아둔 취향을 이제는 직접 만들어 세상에 내놓아 보는 중이고요.
-            더 자세한 근황은 Now 페이지에 계속 적어두고 있습니다.
-          </p>
-          <a class="btn" href="https://blog.eschocolat.dev/now" target="_blank" rel="noreferrer">지금 뭐 하고 지내는지 →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- contact -->
-    <section class="section contact" id="contact" aria-label="연락하기">
-      <div class="container">
-        <p class="eyebrow reveal">Contact</p>
-        <h2 class="reveal">말 걸어주세요<span style="color:var(--coral)">.</span></h2>
-        <p class="reveal">초콜릿 한 조각 나누듯 가볍게요. 글에 대한 감상도, 일 이야기도, 그냥 안부도 좋습니다.</p>
-        <div class="contact-cta reveal">
-          <a class="btn btn-primary" href="mailto:eschocolat.lee@gmail.com">이메일 보내기</a>
-          <a class="btn" href="https://x.com/_eschocolat" target="_blank" rel="noreferrer">X에서 DM</a>
-        </div>
-      </div>
-    </section>
+    <div class="meter" id="meter">
+      <span id="count">12 / 12</span>
+      <button class="reset" id="reset" type="button">다시 붓기 ↺</button>
+    </div>
   </main>
 
-  <footer class="site-foot">
-    <div class="container">
-      <div>© <span id="year"></span> jihoon · Eschocolat</div>
-      <div>
-        <a href="https://blog.eschocolat.dev" target="_blank" rel="noreferrer">Blog</a> ·
-        <a href="https://blog.eschocolat.dev/now" target="_blank" rel="noreferrer">Now</a> ·
-        <a href="https://github.com/eschocolat" target="_blank" rel="noreferrer">GitHub</a>
-      </div>
-    </div>
+  <footer>
+    <div>© <span id="year"></span> jihoon · Eschocolat</div>
+    <nav aria-label="링크">
+      <a href="https://blog.eschocolat.dev" target="_blank" rel="noreferrer">Blog</a>
+      <a href="https://blog.eschocolat.dev/now" target="_blank" rel="noreferrer">Now</a>
+      <a href="https://x.com/_eschocolat" target="_blank" rel="noreferrer">X</a>
+      <a href="https://github.com/eschocolat" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/eschocolat/" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href="mailto:eschocolat.lee@gmail.com">Mail</a>
+    </nav>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
     var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var targets = document.querySelectorAll('.reveal');
-    if (reduced || !('IntersectionObserver' in window)) {
-      targets.forEach(function (el) { el.classList.add('in'); });
-    } else {
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) {
-            e.target.classList.add('in');
-            io.unobserve(e.target);
-          }
-        });
-      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-      targets.forEach(function (el) { io.observe(el); });
+    var slots = Array.prototype.slice.call(document.querySelectorAll('.slot'));
+    var meter = document.getElementById('meter');
+    var count = document.getElementById('count');
+    var total = slots.length;
+
+    function updateMeter() {
+      var left = slots.filter(function (s) { return !s.classList.contains('broken'); }).length;
+      count.textContent = left + ' / ' + total;
+      meter.classList.toggle('dirty', left < total);
+    }
+
+    slots.forEach(function (slot) {
+      var piece = slot.querySelector('.piece');
+      piece.addEventListener('click', function () {
+        if (slot.classList.contains('broken')) return;
+        piece.style.setProperty('--dx', (Math.random() * 160 - 80).toFixed(0) + 'px');
+        piece.style.setProperty('--rot', (Math.random() * 140 - 70).toFixed(0) + 'deg');
+        slot.classList.add('broken');
+        updateMeter();
+      });
+    });
+
+    document.getElementById('reset').addEventListener('click', function () {
+      slots.forEach(function (s) { s.classList.remove('broken'); });
+      updateMeter();
+    });
+
+    /* cursor tilt (mouse only) */
+    if (!reduced) {
+      var bar = document.getElementById('bar');
+      var tx = 0, ty = 0, cx = 0, cy = 0, active = false;
+
+      window.addEventListener('pointermove', function (e) {
+        if (e.pointerType !== 'mouse') return;
+        tx = e.clientX / window.innerWidth - .5;
+        ty = e.clientY / window.innerHeight - .5;
+        if (!active) { active = true; requestAnimationFrame(loop); }
+      });
+
+      function loop() {
+        cx += (tx - cx) * .08;
+        cy += (ty - cy) * .08;
+        bar.style.transform =
+          'rotate(-2deg) rotateX(' + (-cy * 10).toFixed(2) + 'deg) rotateY(' + (cx * 12).toFixed(2) + 'deg)';
+        requestAnimationFrame(loop);
+      }
     }
   </script>
 </body>
