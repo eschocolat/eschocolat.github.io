@@ -514,6 +514,51 @@
     }
 
     /* ---------- floor ---------- */
+    .porthole {
+      position: relative;
+      width: clamp(124px, 19vh, 172px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      margin-bottom: 4vh;
+      animation: float 9s ease-in-out infinite alternate;
+    }
+
+    .porthole img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      filter: grayscale(1) brightness(.92) contrast(1.05);
+    }
+
+    /* deep-sea duotone wash over the photo */
+    .porthole::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 32% 24%, rgba(200, 240, 255, .18), transparent 46%),
+        linear-gradient(180deg, rgba(64, 140, 190, .34), rgba(8, 24, 44, .5));
+      mix-blend-mode: overlay;
+    }
+
+    /* porthole rim + bioluminescent halo */
+    .porthole::after {
+      content: "";
+      position: absolute;
+      inset: -7px;
+      border-radius: 50%;
+      border: 1px solid rgba(238, 246, 248, .28);
+      box-shadow:
+        inset 0 0 0 6px rgba(4, 14, 26, .75),
+        inset 0 0 0 7px rgba(238, 246, 248, .12),
+        0 0 34px 4px rgba(111, 216, 224, .18),
+        0 0 90px 18px rgba(255, 75, 76, .1);
+      pointer-events: none;
+    }
+
     .floor .msg-title {
       font-family: var(--serif);
       font-weight: 700;
@@ -630,6 +675,7 @@
       .orb,
       .jelly,
       .hero .logo,
+      .porthole,
       .dive-hint .arr {
         animation: none;
       }
@@ -755,6 +801,9 @@
     <!-- -100m -->
     <section class="zone floor" id="floor" aria-label="심해 — 연락">
       <div class="inner">
+        <div class="porthole">
+          <img src="profile.jpg" alt="jihoon의 사진" />
+        </div>
         <p class="eyebrow">−100M · THE FLOOR</p>
         <h2 class="msg-title">가장 깊은 곳까지 오셨네요.</h2>
         <p class="msg-sub">여기까지 잠수해준 분이라면, 이미 반쯤은 친구입니다.
