@@ -546,6 +546,83 @@
       border-color: rgba(255, 75, 76, .5);
     }
 
+    /* workbench cards — things in progress */
+    .wips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 4.6vh;
+    }
+
+    .wip {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 7px;
+      min-width: 150px;
+      padding: 18px 26px 16px;
+      border: 1px dashed rgba(111, 216, 224, .32);
+      border-radius: 14px;
+      background: rgba(111, 216, 224, .04);
+    }
+
+    .wip.done {
+      border-style: solid;
+      border-color: rgba(255, 75, 76, .38);
+      background: rgba(255, 75, 76, .05);
+      box-shadow: 0 0 22px rgba(255, 75, 76, .1);
+    }
+
+    .wip-tag {
+      font-family: var(--mono);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .26em;
+      color: var(--cyan);
+    }
+
+    .wip.done .wip-tag {
+      color: var(--coral-soft);
+    }
+
+    .wip strong {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 17px;
+      color: var(--foam);
+    }
+
+    .wip-desc {
+      font-size: 12px;
+      color: var(--foam-dim);
+    }
+
+    /* live dive log — now page excerpt */
+    .now-live {
+      max-width: 30rem;
+      margin-top: 4.2vh;
+      padding-left: 20px;
+      border-left: 1px solid var(--hairline);
+      text-align: left;
+    }
+
+    .now-date {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: .22em;
+      color: var(--coral-soft);
+    }
+
+    .now-excerpt {
+      margin-top: 12px;
+      font-family: var(--serif);
+      font-size: clamp(14px, 2.1vh, 16px);
+      line-height: 2;
+      color: var(--foam-dim);
+      word-break: keep-all;
+    }
+
     /* drifting taste chips */
     .chips {
       list-style: none;
@@ -854,7 +931,9 @@
       <li class="on"><a href="#surface">수면</a></li>
       <li><a href="#focus">몰입</a></li>
       <li><a href="#writing">기록</a></li>
+      <li><a href="#craft">만들기</a></li>
       <li><a href="#taste">취향</a></li>
+      <li><a href="#now">지금</a></li>
       <li><a href="#floor">심해</a></li>
     </ol>
   </nav>
@@ -874,10 +953,10 @@
       </div>
     </section>
 
-    <!-- -25m -->
+    <!-- -20m -->
     <section class="zone" id="focus" aria-label="몰입">
       <div class="inner">
-        <p class="eyebrow">−25M · DEEP FOCUS</p>
+        <p class="eyebrow">−20M · DEEP FOCUS</p>
         <h2 class="word">몰입</h2>
         <p class="caption">한 가지에 깊게 잠기는 시간.</p>
         <p class="log">
@@ -890,18 +969,18 @@
         style="right:14%;top:26%;--bt:7.5s">
         <span class="core" aria-hidden="true"></span><span class="tag">BLOG</span>
       </a>
-      <a class="orb" href="https://blog.eschocolat.dev/now" target="_blank" rel="noreferrer" aria-label="Now 페이지 열기"
-        style="left:12%;top:60%;--bt:9s">
-        <span class="core" aria-hidden="true"></span><span class="tag">NOW</span>
+      <a class="orb" href="https://www.linkedin.com/in/eschocolat/" target="_blank" rel="noreferrer"
+        aria-label="LinkedIn 열기" style="left:12%;top:60%;--bt:9s">
+        <span class="core" aria-hidden="true"></span><span class="tag">LINKEDIN</span>
       </a>
       <span class="jelly" style="left:24%;top:22%;--bt:11s" aria-hidden="true"></span>
       <span class="jelly" style="right:28%;top:72%;--bt:13s" aria-hidden="true"></span>
     </section>
 
-    <!-- -50m -->
+    <!-- -40m -->
     <section class="zone" id="writing" aria-label="기록">
       <div class="inner">
-        <p class="eyebrow">−50M · WRITING</p>
+        <p class="eyebrow">−40M · WRITING</p>
         <h2 class="word">기록</h2>
         <p class="caption">매일, 짧게라도 남기는 글. 심해에서 건져 올린 몇 조각.</p>
         <div class="slips">
@@ -933,12 +1012,44 @@
         style="left:16%;top:28%;--bt:8.5s">
         <span class="core" aria-hidden="true"></span><span class="tag">X</span>
       </a>
-      <a class="orb" href="https://github.com/eschocolat" target="_blank" rel="noreferrer" aria-label="GitHub 열기"
-        style="right:13%;top:58%;--bt:10s">
-        <span class="core" aria-hidden="true"></span><span class="tag">GITHUB</span>
-      </a>
       <span class="jelly" style="right:22%;top:20%;--bt:12s" aria-hidden="true"></span>
       <span class="jelly" style="left:30%;top:76%;--bt:9.5s" aria-hidden="true"></span>
+    </section>
+
+    <!-- -60m -->
+    <section class="zone" id="craft" aria-label="만들기">
+      <div class="inner">
+        <p class="eyebrow">−60M · CRAFT</p>
+        <h2 class="word">만들기</h2>
+        <p class="caption">소비하는 취향에서, 직접 만드는 취향으로.</p>
+        <p class="log">
+          생각을 밖으로 꺼내야 비로소 성장한다고 믿게 됐습니다.
+          완벽하지 않아도, 하나씩 아웃풋을 내보는 연습 중 — 지금 작업대 위에 있는 것들.
+        </p>
+        <div class="wips">
+          <div class="wip">
+            <span class="wip-tag">WIP</span>
+            <strong>작은 앱</strong>
+            <span class="wip-desc">아이디어를 실물로</span>
+          </div>
+          <div class="wip">
+            <span class="wip-tag">WIP</span>
+            <strong>유튜브</strong>
+            <span class="wip-desc">취향을 영상으로</span>
+          </div>
+          <div class="wip done">
+            <span class="wip-tag">SHIPPED</span>
+            <strong>이 사이트</strong>
+            <span class="wip-desc">나를 담은 심해</span>
+          </div>
+        </div>
+      </div>
+      <a class="orb" href="https://github.com/eschocolat" target="_blank" rel="noreferrer" aria-label="GitHub 열기"
+        style="right:14%;top:32%;--bt:10s">
+        <span class="core" aria-hidden="true"></span><span class="tag">GITHUB</span>
+      </a>
+      <span class="jelly" style="left:20%;top:26%;--bt:11.5s" aria-hidden="true"></span>
+      <span class="jelly" style="right:30%;top:78%;--bt:13.5s" aria-hidden="true"></span>
     </section>
 
     <!-- -75m -->
@@ -959,15 +1070,34 @@
           <li style="--bt:8.8s">리스본과 포르투의 기억</li>
         </ul>
       </div>
-      <a class="orb" href="https://www.linkedin.com/in/eschocolat/" target="_blank" rel="noreferrer"
-        aria-label="LinkedIn 열기" style="right:17%;top:32%;--bt:9.5s">
-        <span class="core" aria-hidden="true"></span><span class="tag">LINKEDIN</span>
-      </a>
-      <a class="orb" href="mailto:eschocolat.lee@gmail.com" aria-label="이메일 보내기" style="left:13%;top:62%;--bt:7s">
+      <a class="orb" href="mailto:eschocolat.lee@gmail.com" aria-label="이메일 보내기" style="right:15%;top:38%;--bt:7s">
         <span class="core" aria-hidden="true"></span><span class="tag">MAIL</span>
       </a>
       <span class="jelly" style="left:26%;top:24%;--bt:10.5s" aria-hidden="true"></span>
       <span class="jelly" style="right:30%;top:74%;--bt:14s" aria-hidden="true"></span>
+    </section>
+
+    <!-- -90m -->
+    <section class="zone" id="now" aria-label="지금">
+      <div class="inner">
+        <p class="eyebrow">−90M · NOW</p>
+        <h2 class="word">지금</h2>
+        <p class="caption">이 수심의 물살은 계속 바뀝니다.</p>
+        <div class="now-live">
+          <p class="now-date" id="nowDate">DIVE LOG — 2025. 10. 28.</p>
+          <p class="now-excerpt" id="nowExcerpt">
+            좋아하는 걸 '찾는' 단계에서 '살아내는' 단계로 옮겨가고 있어요.
+            작은 취향들을 일상 속에서 표현하고, 완벽하지 않아도 하나씩 아웃풋을 내보는 연습을 하고 있습니다.
+          </p>
+        </div>
+        <a class="more" href="https://blog.eschocolat.dev/now" target="_blank" rel="noreferrer">전체 일지 읽기 — /NOW →</a>
+      </div>
+      <a class="orb" href="https://blog.eschocolat.dev/now" target="_blank" rel="noreferrer" aria-label="Now 페이지 열기"
+        style="left:14%;top:34%;--bt:9s">
+        <span class="core" aria-hidden="true"></span><span class="tag">NOW</span>
+      </a>
+      <span class="jelly" style="right:24%;top:22%;--bt:12.5s" aria-hidden="true"></span>
+      <span class="jelly" style="left:30%;top:76%;--bt:10s" aria-hidden="true"></span>
     </section>
 
     <!-- -100m -->
@@ -1006,7 +1136,7 @@
     var depthEl = document.getElementById('depth');
     var depthChip = document.getElementById('depthChip');
     var zoneItems = Array.prototype.slice.call(document.querySelectorAll('#zones li'));
-    var zoneSecs = ['surface', 'focus', 'writing', 'taste', 'floor'].map(function (id) {
+    var zoneSecs = ['surface', 'focus', 'writing', 'craft', 'taste', 'now', 'floor'].map(function (id) {
       return document.getElementById(id);
     });
 
@@ -1120,6 +1250,41 @@
             a.appendChild(meta);
             grid.appendChild(a);
           });
+        })
+        .catch(function () { /* keep static fallback */ });
+    })();
+
+    /* live dive log — now page excerpt (Ghost Content API).
+       On any failure the static excerpt stays as fallback. */
+    (function () {
+      var ex = document.getElementById('nowExcerpt');
+      var dt = document.getElementById('nowDate');
+      if (!ex || !window.fetch || !window.DOMParser) return;
+      var API = 'https://blog.eschocolat.dev/ghost/api/content/pages/slug/now/'
+        + '?key=8ac71b45de92764dc2176bc939&fields=html,updated_at';
+      fetch(API, { headers: { 'Accept-Version': 'v6.0' } })
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+        .then(function (data) {
+          var page = (data.pages || [])[0];
+          if (!page || !page.html) return;
+          var doc = new DOMParser().parseFromString(page.html, 'text/html');
+          doc.querySelectorAll('br').forEach(function (br) { br.replaceWith(' '); });
+          var dateLine = '', text = '';
+          doc.querySelectorAll('p').forEach(function (p) {
+            var t = p.textContent.replace(/\s+/g, ' ').trim();
+            if (!t) return;
+            if (!dateLine && /남긴\s*날/.test(t)) { dateLine = t; return; }
+            if (text.length < 160) text += (text ? ' ' : '') + t;
+          });
+          if (text) {
+            ex.textContent = text.length > 175 ? text.slice(0, 175) + '…' : text;
+          }
+          if (dateLine) {
+            dt.textContent = 'DIVE LOG — ' + dateLine.replace(/남긴\s*날\s*[:：]\s*/, '');
+          } else if (page.updated_at) {
+            var d = new Date(page.updated_at);
+            dt.textContent = 'DIVE LOG — ' + d.getFullYear() + '. ' + (d.getMonth() + 1) + '. ' + d.getDate() + '.';
+          }
         })
         .catch(function () { /* keep static fallback */ });
     })();
