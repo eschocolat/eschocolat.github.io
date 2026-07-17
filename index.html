@@ -13,157 +13,30 @@
   </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Eschocolat — minimal intro</title>
-  <meta name="description" content="Eschocolat — 몰입하여 더욱 가치 있게 만들기를 좋아하는 사람." />
+  <title>Eschocolat — 몰입하여 더욱 가치 있게</title>
+  <meta name="description" content="소프트웨어 엔지니어 jihoon의 공간. 코드를 쓰고 글을 쓰며, 취향과 나다움을 매일 기록합니다." />
   <meta name="author" content="Eschocolat" />
-  <meta name="theme-color" content="#f8fafc" />
-  <link rel="icon" href="/favicon.ico" />
+  <meta name="theme-color" content="#211410" />
+  <meta property="og:title" content="Eschocolat — 몰입하여 더욱 가치 있게" />
+  <meta property="og:description" content="소프트웨어 엔지니어 jihoon의 공간. 코드를 쓰고 글을 쓰며, 취향과 나다움을 매일 기록합니다." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.eschocolat.dev" />
+  <meta property="og:image" content="https://www.eschocolat.dev/Eschocolat.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@_eschocolat" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍫</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
     rel="stylesheet">
   <style>
-    /* reset.css */
-
-    html,
-    body,
-    div,
-    span,
-    applet,
-    object,
-    iframe,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    blockquote,
-    pre,
-    a,
-    abbr,
-    acronym,
-    address,
-    big,
-    cite,
-    code,
-    del,
-    dfn,
-    em,
-    img,
-    ins,
-    kbd,
-    q,
-    s,
-    samp,
-    small,
-    strike,
-    strong,
-    sub,
-    sup,
-    tt,
-    var,
-    b,
-    u,
-    i,
-    center,
-    dl,
-    dt,
-    dd,
-    ol,
-    ul,
-    li,
-    fieldset,
-    form,
-    label,
-    legend,
-    table,
-    caption,
-    tbody,
-    tfoot,
-    thead,
-    tr,
-    th,
-    td {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      outline: 0;
-      font-size: 100%;
-      vertical-align: baseline;
-    }
-
-    body {
-      line-height: 1;
-    }
-
-    ol,
-    ul {
-      list-style: none;
-    }
-
-    blockquote,
-    q {
-      quotes: none;
-    }
-
-    blockquote:before,
-    blockquote:after,
-    q:before,
-    q:after {
-      content: '';
-      content: none;
-    }
-
-    table {
-      border-collapse: collapse;
-      border-spacing: 0;
-    }
-
-    :root {
-      --bg1: #f8fafc;
-      --bg2: #e2e8f0;
-      --bg3: #ffffff;
-      --panel: rgba(255, 255, 255, 0.62);
-      --panel-solid: #ffffff;
-      --text: #0f172a;
-      --muted: #64748b;
-      --border: rgba(148, 163, 184, .38);
-      --brand: #FF4B4C;
-      --brand-hover: #e13b3c;
-      --radius-lg: 22px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    @font-face {
-      font-family: 'Suit';
-      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Thin.woff2') format('woff2');
-      font-weight: 100;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'Suit';
-      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-ExtraLight.woff2') format('woff2');
-      font-weight: 200;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'Suit';
-      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Light.woff2') format('woff2');
-      font-weight: 300;
-      font-display: swap;
-    }
-
+    /* ---------- fonts ---------- */
     @font-face {
       font-family: 'Suit';
       src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
-      font-weight: normal;
+      font-weight: 400;
       font-display: swap;
     }
 
@@ -171,13 +44,6 @@
       font-family: 'Suit';
       src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
       font-weight: 500;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'Suit';
-      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-SemiBold.woff2') format('woff2');
-      font-weight: 600;
       font-display: swap;
     }
 
@@ -195,303 +61,882 @@
       font-display: swap;
     }
 
-    @font-face {
-      font-family: 'Suit';
-      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Heavy.woff2') format('woff2');
-      font-weight: 900;
-      font-display: swap;
+    /* ---------- tokens ---------- */
+    :root {
+      --cacao: #211410;
+      /* page ground — deep cacao */
+      --cacao-2: #2a1a13;
+      /* raised panel */
+      --bar: #3a2416;
+      /* chocolate bar surface */
+      --bar-hi: #4b2f1c;
+      --cream: #f3e7d7;
+      /* primary text */
+      --cream-dim: #c8b3a1;
+      /* secondary text */
+      --hairline: rgba(243, 231, 215, .14);
+      --coral: #ff4b4c;
+      /* brand accent (wordmark red) */
+      --coral-deep: #e13b3c;
+      --serif: 'Gowun Batang', 'Nanum Myeongjo', georgia, serif;
+      --sans: 'Suit', ui-sans-serif, system-ui, -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      --mono: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+      --w: 1020px;
     }
 
-    html,
-    body {
+    /* ---------- base ---------- */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
       margin: 0;
-      font-family: "Suit", ui-sans-serif, system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
-      line-height: 1.6;
-      color: var(--text);
-      height: auto;
-      overflow-y: auto;
-      scroll-behavior: smooth;
+      padding: 0;
     }
 
     html {
-      background-color: rgba(59, 130, 246, .12);
+      scroll-behavior: smooth;
+      scroll-padding-top: 84px;
     }
 
     body {
-      background:
-        radial-gradient(600px 600px at 10% 10%, rgba(22, 163, 74, .18), transparent 60%),
-        radial-gradient(550px 550px at 90% 0%, rgba(59, 130, 246, .12), transparent 60%),
-        linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 45%, var(--bg3) 100%);
-      background-attachment: fixed;
-    }
-
-    .layout {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      min-height: 100dvh;
-    }
-
-    .shell {
-      max-width: 520px;
-      width: min(100%, 540px);
-      background: radial-gradient(circle at top, rgba(255, 255, 255, 0.3), transparent 55%), var(--panel);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
-      border-radius: var(--radius-lg);
-      backdrop-filter: blur(16px);
-      box-shadow: 0 20px 50px rgba(15, 23, 42, .08);
-
-      padding: 32px 36px 30px;
-      margin: 32px 12px;
-      text-align: center;
-    }
-
-    .badge {
-      display: inline-flex;
-      gap: 6px;
-      padding: 4px 12px;
-      background: rgba(255, 75, 76, 0.12);
-      border: 1px solid rgba(255, 75, 76, 0.25);
-      color: var(--brand-hover);
-      border-radius: 999px;
-      font-size: 11.5px;
-      letter-spacing: -.02em;
-    }
-
-    h1.title {
-      font-size: 22px;
-      margin: 10px 0 16px;
+      background: var(--cacao);
+      color: var(--cream);
+      font-family: var(--sans);
+      line-height: 1.7;
       letter-spacing: -.01em;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
-    .sub {
-      color: var(--muted);
-      margin: 0 auto 18px;
-      max-width: 44rem;
+    /* faint wrapper-paper grain over everything */
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 60;
+      pointer-events: none;
+      opacity: .05;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .mono {
+      font-family: var(--mono);
+    }
+
+    .container {
+      max-width: var(--w);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    ::selection {
+      background: var(--coral);
+      color: var(--cacao);
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--coral);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* ---------- header ---------- */
+    .site-head {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(33, 20, 16, .78);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .site-head .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .head-logo img {
+      height: 17px;
+      width: auto;
+    }
+
+    .head-nav {
+      display: flex;
+      gap: 26px;
+      font-family: var(--mono);
+      font-size: 12.5px;
+      color: var(--cream-dim);
+    }
+
+    .head-nav a:hover {
+      color: var(--coral);
+    }
+
+    /* ---------- hero ---------- */
+    .hero {
+      padding: 92px 0 110px;
+    }
+
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1.04fr .96fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: .22em;
+      color: var(--coral);
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: clamp(34px, 4.6vw, 52px);
+      line-height: 1.32;
+      letter-spacing: -.015em;
+      margin: 18px 0 22px;
       word-break: keep-all;
     }
 
-    .icons {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      margin: 14px 0 0;
+    .hero h1 .dot {
+      color: var(--coral);
     }
 
-    .brand-color {
-      color: var(--brand);
+    .hero-sub {
+      color: var(--cream-dim);
+      font-size: 16.5px;
+      max-width: 30rem;
+      word-break: keep-all;
     }
 
-    .icon-btn {
-      width: 40px;
-      height: 40px;
-      border-radius: 14px;
-      border: 1px solid rgba(148, 163, 184, .35);
-      background: rgba(255, 255, 255, .35);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform .15s ease-out, box-shadow .15s ease-out;
-      color: var(--text);
-    }
-
-    .icon-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(255, 75, 76, 0.25);
-      color: var(--brand-hover);
-    }
-
-    .cta {
+    .hero-cta {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      column-gap: 22px;
-      row-gap: 26px;
-      margin-top: 32px;
-    }
-
-    .avatar {
-      width: 96px;
-      height: 96px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin: 26px auto 10px;
-      display: block;
-      border: 2px solid rgba(255, 255, 255, 0.7);
-      box-shadow:
-        0 0 0 3px rgba(255, 75, 76, 0.1),
-        0 6px 20px rgba(0, 0, 0, 0.1),
-        0 0 30px rgba(255, 75, 76, 0.2);
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
-    }
-
-    .avatar:hover {
-      transform: scale(1.1);
-      box-shadow:
-        0 0 0 4px rgba(255, 75, 76, 0.05),
-        0 8px 24px rgba(0, 0, 0, 0.1),
-        0 0 40px rgba(255, 75, 76, 0.15);
+      align-items: center;
+      gap: 14px;
+      margin-top: 34px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      border: 1px solid rgba(148, 163, 184, .3);
-      border-radius: 14px;
-      padding: 9px 16px 10px;
-      background: rgba(255, 255, 255, .6);
-      backdrop-filter: blur(4px);
-      font-weight: 600;
-      color: var(--text);
-      transition: transform .15s ease-out, box-shadow .15s ease-out, background .15s ease-out;
-      text-decoration: none;
-    }
-
-    .btn.primary {
-      background: linear-gradient(160deg, rgba(255, 75, 76, 0.2), rgba(255, 255, 255, 0.7));
-      border: 1px solid rgba(255, 75, 76, 0.35);
-      box-shadow: 0 10px 30px rgba(255, 75, 76, 0.18);
-      color: var(--text);
-    }
-
-    .btn.primary:hover {
-      background: linear-gradient(160deg, rgba(255, 75, 76, 0.25), rgba(255, 255, 255, 0.9));
-      box-shadow: 0 14px 38px rgba(255, 75, 76, 0.28);
-      transform: translateY(-1px);
+      gap: 8px;
+      font-weight: 700;
+      font-size: 14.5px;
+      padding: 12px 22px;
+      border-radius: 999px;
+      border: 1px solid var(--hairline);
+      color: var(--cream);
+      transition: transform .18s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease;
     }
 
     .btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 12px 28px rgba(15, 23, 42, .06);
-      background: rgba(255, 255, 255, .9);
+      transform: translateY(-2px);
+      border-color: rgba(243, 231, 215, .34);
     }
 
-    footer {
-      margin-top: 26px;
-      color: var(--muted);
-      font-size: 13px;
+    .btn-primary {
+      background: var(--coral);
+      border-color: var(--coral);
+      color: #241511;
+      font-weight: 800;
+      box-shadow: 0 10px 30px rgba(255, 75, 76, .22);
     }
 
-    footer a {
-      color: inherit;
-      text-decoration: none;
+    .btn-primary:hover {
+      background: var(--coral-deep);
+      border-color: var(--coral-deep);
+      box-shadow: 0 14px 36px rgba(255, 75, 76, .3);
     }
 
-    footer a:hover {
-      text-decoration: underline;
+    .hero-social {
+      display: flex;
+      gap: 10px;
+      margin-left: 4px;
     }
 
-    .mono {
-      font-family: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    .icon-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid var(--hairline);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--cream-dim);
+      transition: transform .18s ease, color .18s ease, border-color .18s ease;
     }
 
-    .subtitle {
-      font-size: 17px;
-      color: #445066;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-      animation: fadeIn 0.8s ease forwards;
-      opacity: 0;
-      margin: 30px auto 6px;
+    .icon-btn:hover {
+      transform: translateY(-2px);
+      color: var(--coral);
+      border-color: rgba(255, 75, 76, .5);
+    }
+
+    /* ---------- the chocolate bar ---------- */
+    .bar-scene {
+      display: flex;
+      justify-content: center;
+      perspective: 900px;
+    }
+
+    .bar {
+      position: relative;
+      width: min(100%, 430px);
+      padding: 16px;
+      border-radius: 18px;
+      background: linear-gradient(160deg, var(--bar-hi), var(--bar) 55%, #2e1c11);
+      box-shadow:
+        0 40px 70px rgba(0, 0, 0, .5),
+        0 12px 24px rgba(0, 0, 0, .35),
+        inset 0 1px 0 rgba(243, 231, 215, .1);
+      transform: rotate(-3.5deg);
+    }
+
+    .bar-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 7px;
+    }
+
+    .piece {
+      aspect-ratio: 1;
+      border-radius: 9px;
+      background: linear-gradient(150deg, #46301e, #33200f 70%);
+      box-shadow:
+        inset 2px 2px 3px rgba(245, 230, 210, .10),
+        inset -3px -4px 7px rgba(0, 0, 0, .5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 700;
+      color: rgba(0, 0, 0, .34);
+      text-shadow: 0 1px 0 rgba(255, 236, 214, .12);
+      transition: transform .22s cubic-bezier(.34, 1.56, .64, 1);
+    }
+
+    .piece:hover {
+      transform: translateY(-6px) rotate(-2deg);
+    }
+
+    .piece-broken {
+      transform: translate(22%, 30%) rotate(11deg);
+      box-shadow:
+        inset 2px 2px 3px rgba(245, 230, 210, .10),
+        inset -3px -4px 7px rgba(0, 0, 0, .5),
+        0 14px 22px rgba(0, 0, 0, .45);
+    }
+
+    .piece-broken:hover {
+      transform: translate(0, 0) rotate(0deg);
+    }
+
+    /* paper band around the bar */
+    .band {
+      position: absolute;
+      left: -5.5%;
+      right: -5.5%;
+      top: 50%;
+      transform: translateY(-50%) rotate(-1.6deg);
+      background: var(--coral);
+      border-radius: 4px;
+      padding: 16px 10px 14px;
+      text-align: center;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, .4);
+    }
+
+    .band img {
+      height: 30px;
+      width: auto;
+      margin: 0 auto 6px;
+      filter: brightness(0) invert(1);
+      opacity: .96;
+    }
+
+    .band-note {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: .18em;
+      color: rgba(36, 21, 17, .85);
+      font-weight: 700;
+    }
+
+    /* ---------- sections ---------- */
+    .section {
+      padding: 92px 0;
+      border-top: 1px solid var(--hairline);
+    }
+
+    .sec-head {
+      margin-bottom: 44px;
+    }
+
+    .sec-head h2 {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: clamp(26px, 3.2vw, 34px);
+      margin-top: 12px;
       word-break: keep-all;
     }
 
-    @media (max-width: 520px) {
-      .shell {
-        padding: 22px 18px 26px;
+    .sec-desc {
+      color: var(--cream-dim);
+      margin-top: 12px;
+      max-width: 34rem;
+      word-break: keep-all;
+    }
+
+    /* ingredients */
+    .ing-row {
+      display: grid;
+      grid-template-columns: 200px 1fr auto;
+      gap: 24px;
+      align-items: baseline;
+      padding: 26px 4px;
+      border-top: 1px solid var(--hairline);
+    }
+
+    .ing-row:last-child {
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .ing-name {
+      font-family: var(--serif);
+      font-size: 23px;
+      font-weight: 700;
+    }
+
+    .ing-name small {
+      display: block;
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: .2em;
+      color: var(--cream-dim);
+      margin-top: 4px;
+      text-transform: uppercase;
+    }
+
+    .ing-desc {
+      color: var(--cream-dim);
+      font-size: 15.5px;
+      max-width: 34rem;
+      word-break: keep-all;
+    }
+
+    .ing-tag {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: .12em;
+      color: var(--coral);
+      border: 1px solid rgba(255, 75, 76, .4);
+      border-radius: 999px;
+      padding: 4px 12px;
+      white-space: nowrap;
+    }
+
+    /* writing */
+    .post-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .post-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 34px;
+      min-height: 168px;
+      padding: 26px 26px 22px;
+      border: 1px solid var(--hairline);
+      border-radius: 16px;
+      background: var(--cacao-2);
+      transition: transform .2s ease, border-color .2s ease;
+    }
+
+    .post-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 75, 76, .55);
+    }
+
+    .post-card h3 {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.5;
+      word-break: keep-all;
+    }
+
+    .post-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: .14em;
+      color: var(--cream-dim);
+    }
+
+    .post-card:hover .post-meta .go {
+      color: var(--coral);
+    }
+
+    .more-link {
+      display: inline-block;
+      margin-top: 30px;
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--cream-dim);
+      border-bottom: 1px solid var(--hairline);
+      padding-bottom: 3px;
+    }
+
+    .more-link:hover {
+      color: var(--coral);
+      border-color: var(--coral);
+    }
+
+    /* now */
+    .now-grid {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 52px;
+      align-items: center;
+    }
+
+    .now-photo {
+      position: relative;
+    }
+
+    .now-photo img {
+      border-radius: 16px;
+      filter: sepia(.26) contrast(1.03) brightness(.96);
+      border: 1px solid var(--hairline);
+    }
+
+    .now-photo::after {
+      content: "EST. JIHOON";
+      position: absolute;
+      left: 14px;
+      bottom: 12px;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: .22em;
+      color: rgba(243, 231, 215, .75);
+    }
+
+    .now-copy p {
+      color: var(--cream-dim);
+      max-width: 32rem;
+      word-break: keep-all;
+      margin-top: 12px;
+    }
+
+    .now-copy h2 {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: clamp(26px, 3.2vw, 34px);
+      margin-top: 12px;
+    }
+
+    .now-copy .btn {
+      margin-top: 28px;
+    }
+
+    /* contact */
+    .contact {
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: clamp(28px, 3.6vw, 40px);
+      margin-top: 14px;
+    }
+
+    .contact p {
+      color: var(--cream-dim);
+      margin: 14px auto 0;
+      max-width: 28rem;
+      word-break: keep-all;
+    }
+
+    .contact-cta {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    /* footer */
+    .site-foot {
+      border-top: 1px solid var(--hairline);
+      padding: 30px 0 38px;
+    }
+
+    .site-foot .container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--cream-dim);
+    }
+
+    .site-foot a:hover {
+      color: var(--coral);
+    }
+
+    /* ---------- motion ---------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
       }
 
-      .cta {
-        flex-direction: column;
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
       }
 
-      .btn {
-        justify-content: center;
+      .piece,
+      .btn,
+      .icon-btn,
+      .post-card {
+        transition: none;
       }
 
-      .subtitle {
-        max-width: 200px;
+      .piece:hover,
+      .piece-broken:hover {
+        transform: none;
+      }
+
+      .piece-broken {
+        transform: translate(22%, 30%) rotate(11deg);
       }
     }
 
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(6px);
+    /* ---------- responsive ---------- */
+    @media (max-width: 880px) {
+      .hero {
+        padding: 60px 0 84px;
       }
 
-      to {
-        opacity: 1;
-        transform: translateY(0);
+      .hero .container {
+        grid-template-columns: 1fr;
+        gap: 64px;
+      }
+
+      .bar-scene {
+        order: 2;
+      }
+
+      .bar {
+        width: min(100%, 360px);
+      }
+
+      .ing-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .ing-tag {
+        justify-self: start;
+      }
+
+      .post-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .post-card {
+        min-height: 0;
+        gap: 24px;
+      }
+
+      .now-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .now-photo {
+        max-width: 320px;
+      }
+
+      .section {
+        padding: 68px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .head-nav {
+        gap: 16px;
+        font-size: 11.5px;
+      }
+
+      .band img {
+        height: 24px;
+      }
+
+      .piece {
+        font-size: 20px;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="layout">
-    <main class="shell" aria-label="jihoon 소개">
-      <div>
-        <span class="badge mono">jihoon · software / writing</span>
-      </div>
-      <img class="avatar" src="profile.jpg" alt="eschocolat" />
-      <p class="subtitle">
-        몰입하여 더욱 가치 있게 만들기를 좋아하는 사람.
-      </p>
-      <h1 class="title">안녕하세요, <span class="brand-color">Eschocolat</span> 입니다.</h1>
-      <p class="sub">
-        소프트웨어 엔지니어입니다. 글을 쓰고, 취향을 만들고, 영감을 얻고, 나다움을 매일 기록하려 합니다.
-        이 페이지는 앞으로 채워나갈 저만의 공간입니다. 저를 간단히 소개하고, 저와 관련된 어딘가로 연결해줍니다.
-      </p>
+  <header class="site-head">
+    <div class="container">
+      <a class="head-logo" href="#" aria-label="Eschocolat 홈">
+        <img src="Eschocolat.png" alt="Eschocolat" />
+      </a>
+      <nav class="head-nav" aria-label="페이지 내 이동">
+        <a href="#ingredients">성분</a>
+        <a href="#writing">글</a>
+        <a href="#now">지금</a>
+        <a href="#contact">연락</a>
+      </nav>
+    </div>
+  </header>
 
-      <div class="icons" aria-label="Social links">
-        <a class="icon-btn" href="https://x.com/_eschocolat" target="_blank" rel="noreferrer" aria-label="X">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-            <path d="M18 2h3l-7 8 8 10h-6l-5-6-6 6H2l7-8L2 2h6l5 6 5-6Z" fill="currentColor" />
-          </svg>
-        </a>
-        <a class="icon-btn" href="https://www.linkedin.com/in/eschocolat/" target="_blank" rel="noreferrer"
-          aria-label="LinkedIn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-            <path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5Z" fill="currentColor" />
-            <path
-              d="M3 9h4v12H3zM10 9h4v2.4h.06c.56-1.06 1.94-2.4 3.99-2.4 4.27 0 5.06 2.8 5.06 6.44V21h-4v-5.1c0-1.22-.02-2.79-1.7-2.79-1.7 0-1.96 1.33-1.96 2.7V21h-4z"
-              fill="currentColor" />
-          </svg>
-        </a>
-        <a class="icon-btn" href="https://github.com/eschocolat" target="_blank" rel="noreferrer" aria-label="GitHub">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.8-.25.8-.57V20.3c-3.26.7-3.95-1.57-3.95-1.57-.53-1.34-1.3-1.7-1.3-1.7-1.07-.73.08-.72.08-.72 1.18.08 1.8 1.21 1.8 1.21 1.05 1.8 2.76 1.28 3.43.98.1-.77.41-1.28.75-1.57-2.6-.3-5.33-1.3-5.33-5.78 0-1.28.46-2.32 1.2-3.14-.12-.3-.52-1.5.12-3.12 0 0 .98-.31 3.2 1.2.94-.26 1.95-.4 2.96-.4s2.02.14 2.96.4c2.21-1.51 3.19-1.2 3.19-1.2.64 1.62.24 2.82.12 3.12.75.82 1.2 1.86 1.2 3.14 0 4.49-2.73 5.47-5.34 5.77.42.36.8 1.07.8 2.16v3.2c0 .32.21.67.81.56A11.5 11.5 0 0 0 12 .5Z"
-              fill="currentColor" />
-          </svg>
-        </a>
-      </div>
-
-      <div class="cta">
-        <a class="btn primary" href="https://blog.eschocolat.dev" target="_blank" rel="noreferrer">블로그로 가기 (Ghost) ↗</a>
-        <a class="btn" href="https://blog.eschocolat.dev/now" target="_blank" rel="noreferrer">Now 페이지 ↗</a>
-      </div>
-
-      <div class="cta" style="margin-top:26px">
-        <a class="btn" href="mailto:eschocolat.lee@gmail.com">이메일 보내기</a>
-      </div>
-
-      <footer>
-        <div class="mono">© <span id="year"></span> jihoon · <a
-            href="mailto:eschocolat.lee@gmail.com">eschocolat.lee@gmail.com</a>
+  <main>
+    <!-- hero -->
+    <section class="hero" aria-label="소개">
+      <div class="container">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">Software Engineer · Writer</p>
+          <h1 class="reveal">몰입하여,<br />더욱 가치 있게 만드는 사람<span class="dot">.</span></h1>
+          <p class="hero-sub reveal">
+            안녕하세요, 소프트웨어 엔지니어 jihoon입니다.
+            코드를 쓰고 글을 쓰며, 취향과 나다움을 매일 기록합니다.
+            이곳은 저라는 사람을 조각조각 담아두는 작은 진열대입니다.
+          </p>
+          <div class="hero-cta reveal">
+            <a class="btn btn-primary" href="https://blog.eschocolat.dev" target="_blank" rel="noreferrer">EsLog에서 글 읽기
+              →</a>
+            <div class="hero-social" aria-label="소셜 링크">
+              <a class="icon-btn" href="https://x.com/_eschocolat" target="_blank" rel="noreferrer" aria-label="X">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M18 2h3l-7 8 8 10h-6l-5-6-6 6H2l7-8L2 2h6l5 6 5-6Z" fill="currentColor" />
+                </svg>
+              </a>
+              <a class="icon-btn" href="https://github.com/eschocolat" target="_blank" rel="noreferrer"
+                aria-label="GitHub">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.8-.25.8-.57V20.3c-3.26.7-3.95-1.57-3.95-1.57-.53-1.34-1.3-1.7-1.3-1.7-1.07-.73.08-.72.08-.72 1.18.08 1.8 1.21 1.8 1.21 1.05 1.8 2.76 1.28 3.43.98.1-.77.41-1.28.75-1.57-2.6-.3-5.33-1.3-5.33-5.78 0-1.28.46-2.32 1.2-3.14-.12-.3-.52-1.5.12-3.12 0 0 .98-.31 3.2 1.2.94-.26 1.95-.4 2.96-.4s2.02.14 2.96.4c2.21-1.51 3.19-1.2 3.19-1.2.64 1.62.24 2.82.12 3.12.75.82 1.2 1.86 1.2 3.14 0 4.49-2.73 5.47-5.34 5.77.42.36.8 1.07.8 2.16v3.2c0 .32.21.67.81.56A11.5 11.5 0 0 0 12 .5Z"
+                    fill="currentColor" />
+                </svg>
+              </a>
+              <a class="icon-btn" href="https://www.linkedin.com/in/eschocolat/" target="_blank" rel="noreferrer"
+                aria-label="LinkedIn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5Z" fill="currentColor" />
+                  <path
+                    d="M3 9h4v12H3zM10 9h4v2.4h.06c.56-1.06 1.94-2.4 3.99-2.4 4.27 0 5.06 2.8 5.06 6.44V21h-4v-5.1c0-1.22-.02-2.79-1.7-2.79-1.7 0-1.96 1.33-1.96 2.7V21h-4z"
+                    fill="currentColor" />
+                </svg>
+              </a>
+              <a class="icon-btn" href="mailto:eschocolat.lee@gmail.com" aria-label="이메일 보내기">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M3 6.5A2.5 2.5 0 0 1 5.5 4h13A2.5 2.5 0 0 1 21 6.5v11a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5v-11Zm2.3-.5 6.2 5.2a.8.8 0 0 0 1 0L18.7 6H5.3Zm13.7 1.9-5.5 4.6a2.8 2.8 0 0 1-3.6 0L4.4 7.9v9.6c0 .6.5 1 1.1 1h13c.6 0 1.1-.4 1.1-1V7.9Z"
+                    fill="currentColor" />
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="mono"><a href="https://blog.eschocolat.dev" target="_blank">Blog</a> · <a
-            href="https://blog.eschocolat.dev/now" target="_blank">Now</a></div>
-      </footer>
-    </main>
-  </div>
+
+        <div class="bar-scene reveal" aria-hidden="true">
+          <div class="bar">
+            <div class="bar-grid">
+              <div class="piece">Ē</div>
+              <div class="piece">Ē</div>
+              <div class="piece">Ē</div>
+              <div class="piece">Ē</div>
+              <div class="piece">Ē</div>
+              <div class="piece">Ē</div>
+              <div class="piece">Ē</div>
+              <div class="piece">Ē</div>
+              <div class="piece">Ē</div>
+              <div class="piece">Ē</div>
+              <div class="piece">Ē</div>
+              <div class="piece piece-broken">Ē</div>
+            </div>
+            <div class="band">
+              <img src="Eschocolat.png" alt="" />
+              <div class="band-note">CACAO 100% · 몰입 · 기록 · 취향</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ingredients -->
+    <section class="section" id="ingredients" aria-label="성분표 — 제가 아끼는 것들">
+      <div class="container">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Ingredients</p>
+          <h2>성분표</h2>
+          <p class="sec-desc">이 사람은 대체로 다음 세 가지로 이루어져 있습니다.</p>
+        </div>
+
+        <div class="ing-row reveal">
+          <div class="ing-name">몰입<small>Deep Focus</small></div>
+          <p class="ing-desc">한 가지에 깊게 잠겨, 손에 잡히는 것을 더 가치 있게 만들어내는 시간을 가장 아낍니다. 요즘은 오래 지속 가능한 몰입의 리듬을 연습하고 있습니다.</p>
+          <span class="ing-tag">100%</span>
+        </div>
+        <div class="ing-row reveal">
+          <div class="ing-name">기록<small>Writing</small></div>
+          <p class="ing-desc">매일 짧게라도 글을 남깁니다. 코드와 일과 마음에 대한 생각들이 블로그 EsLog에 쌓이는 중입니다. 나다움은 기록에서 자란다고 믿습니다.</p>
+          <span class="ing-tag">매일</span>
+        </div>
+        <div class="ing-row reveal">
+          <div class="ing-name">취향<small>Taste</small></div>
+          <p class="ing-desc">취향을 찾는 단계에서, 살아내는 단계로 옮겨가는 중입니다. 좋아하는 것을 고르는 데서 멈추지 않고 직접 만들어 표현해보려 합니다.</p>
+          <span class="ing-tag">숙성 중</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- writing -->
+    <section class="section" id="writing" aria-label="최근 쓴 글">
+      <div class="container">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Tasting Notes</p>
+          <h2>글 몇 조각</h2>
+          <p class="sec-desc">블로그 EsLog에서 꺼내온 조각들입니다. 하나 집어 맛보세요.</p>
+        </div>
+
+        <div class="post-grid">
+          <a class="post-card reveal" href="https://blog.eschocolat.dev/code-is-the-translation-of-reality/"
+            target="_blank" rel="noreferrer">
+            <h3>코드는 현실의 번역이다</h3>
+            <div class="post-meta"><span>ESLOG</span><span class="go">읽기 →</span></div>
+          </a>
+          <a class="post-card reveal" href="https://blog.eschocolat.dev/the-value-of-taste/" target="_blank"
+            rel="noreferrer">
+            <h3>취향의 쓸모</h3>
+            <div class="post-meta"><span>ESLOG</span><span class="go">읽기 →</span></div>
+          </a>
+          <a class="post-card reveal" href="https://blog.eschocolat.dev/conversation-is-giving-a-place-in-your-heart/"
+            target="_blank" rel="noreferrer">
+            <h3>대화란 상대에게 마음 한 자리를 내어주는 일</h3>
+            <div class="post-meta"><span>ESLOG</span><span class="go">읽기 →</span></div>
+          </a>
+          <a class="post-card reveal" href="https://blog.eschocolat.dev/mindset-for-the-ai-era/" target="_blank"
+            rel="noreferrer">
+            <h3>AI 시대에 가져야 할 마음</h3>
+            <div class="post-meta"><span>ESLOG</span><span class="go">읽기 →</span></div>
+          </a>
+        </div>
+
+        <a class="more-link reveal" href="https://blog.eschocolat.dev" target="_blank" rel="noreferrer">모든 글 보기 —
+          blog.eschocolat.dev →</a>
+      </div>
+    </section>
+
+    <!-- now -->
+    <section class="section" id="now" aria-label="요즘의 근황">
+      <div class="container now-grid">
+        <div class="now-photo reveal">
+          <img src="profile.jpg" alt="jihoon의 프로필 사진" />
+        </div>
+        <div class="now-copy reveal">
+          <p class="eyebrow">Now</p>
+          <h2>요즘의 저는</h2>
+          <p>
+            완벽함보다 균형과 회복의 리듬을 아끼며, 건강하게 오래 가는 사람이 되는 연습을 하고 있습니다.
+            찾아둔 취향을 이제는 직접 만들어 세상에 내놓아 보는 중이고요.
+            더 자세한 근황은 Now 페이지에 계속 적어두고 있습니다.
+          </p>
+          <a class="btn" href="https://blog.eschocolat.dev/now" target="_blank" rel="noreferrer">지금 뭐 하고 지내는지 →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section class="section contact" id="contact" aria-label="연락하기">
+      <div class="container">
+        <p class="eyebrow reveal">Contact</p>
+        <h2 class="reveal">말 걸어주세요<span style="color:var(--coral)">.</span></h2>
+        <p class="reveal">초콜릿 한 조각 나누듯 가볍게요. 글에 대한 감상도, 일 이야기도, 그냥 안부도 좋습니다.</p>
+        <div class="contact-cta reveal">
+          <a class="btn btn-primary" href="mailto:eschocolat.lee@gmail.com">이메일 보내기</a>
+          <a class="btn" href="https://x.com/_eschocolat" target="_blank" rel="noreferrer">X에서 DM</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="container">
+      <div>© <span id="year"></span> jihoon · Eschocolat</div>
+      <div>
+        <a href="https://blog.eschocolat.dev" target="_blank" rel="noreferrer">Blog</a> ·
+        <a href="https://blog.eschocolat.dev/now" target="_blank" rel="noreferrer">Now</a> ·
+        <a href="https://github.com/eschocolat" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var targets = document.querySelectorAll('.reveal');
+    if (reduced || !('IntersectionObserver' in window)) {
+      targets.forEach(function (el) { el.classList.add('in'); });
+    } else {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('in');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      targets.forEach(function (el) { io.observe(el); });
+    }
   </script>
 </body>
 
