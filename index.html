@@ -370,6 +370,14 @@
       text-shadow: 0 0 18px rgba(140, 210, 240, .45);
     }
 
+    .hero .role {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: .3em;
+      color: var(--foam-dim);
+      margin-top: 18px;
+    }
+
     .dive-hint {
       position: absolute;
       bottom: 5vh;
@@ -451,6 +459,128 @@
       color: var(--foam-dim);
       margin-top: 3.2vh;
       word-break: keep-all;
+    }
+
+    /* dive log — short prose under a zone word */
+    .log {
+      max-width: 27rem;
+      margin-top: 3.6vh;
+      font-size: clamp(13.5px, 2vh, 15px);
+      line-height: 1.9;
+      color: var(--foam-dim);
+      word-break: keep-all;
+    }
+
+    .log b {
+      font-weight: 700;
+      color: var(--foam);
+    }
+
+    /* drifting slips — writing cards */
+    .slips {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      width: min(660px, 92vw);
+      margin-top: 5vh;
+    }
+
+    .slip {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: left;
+      padding: 18px 20px 15px;
+      border-radius: 12px;
+      border: 1px solid rgba(238, 246, 248, .13);
+      background: rgba(9, 24, 40, .45);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      transform: rotate(var(--rt, 0deg));
+      transition: transform .35s cubic-bezier(.22, 1, .36, 1), border-color .3s ease, box-shadow .3s ease;
+    }
+
+    .slip strong {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 15.5px;
+      line-height: 1.55;
+      color: var(--foam);
+      word-break: keep-all;
+    }
+
+    .slip .slip-meta {
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--mono);
+      font-size: 9.5px;
+      letter-spacing: .2em;
+      color: var(--foam-dim);
+    }
+
+    .slip:hover,
+    .slip:focus-visible {
+      transform: rotate(0deg) translateY(-4px);
+      border-color: rgba(255, 75, 76, .5);
+      box-shadow: 0 0 30px rgba(255, 75, 76, .14);
+    }
+
+    .slip:hover .slip-meta {
+      color: var(--coral-soft);
+    }
+
+    .more {
+      display: inline-block;
+      margin-top: 3.4vh;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: .14em;
+      color: var(--foam-dim);
+      border-bottom: 1px solid var(--hairline);
+      padding-bottom: 4px;
+      transition: color .3s ease, border-color .3s ease;
+    }
+
+    .more:hover {
+      color: var(--coral-soft);
+      border-color: rgba(255, 75, 76, .5);
+    }
+
+    /* drifting taste chips */
+    .chips {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 14px;
+      max-width: 560px;
+      margin-top: 4.6vh;
+    }
+
+    .chips li {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 13.5px;
+      color: var(--foam-dim);
+      padding: 9px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(111, 216, 224, .26);
+      background: rgba(111, 216, 224, .05);
+      box-shadow: 0 0 20px rgba(111, 216, 224, .08);
+      animation: float var(--bt, 8s) ease-in-out infinite alternate;
+      word-break: keep-all;
+    }
+
+    .chips li.warm {
+      border-color: rgba(255, 75, 76, .3);
+      background: rgba(255, 75, 76, .05);
+      box-shadow: 0 0 20px rgba(255, 75, 76, .08);
+    }
+
+    @media (max-width: 640px) {
+      .slips {
+        grid-template-columns: 1fr;
+      }
     }
 
     /* ---------- orbs (bioluminescent links) ---------- */
@@ -676,6 +806,7 @@
       .jelly,
       .hero .logo,
       .porthole,
+      .chips li,
       .dive-hint .arr {
         animation: none;
       }
@@ -735,6 +866,7 @@
       <div class="inner in">
         <img class="logo" src="Eschocolat.png" alt="Eschocolat" />
         <p class="tagline"><em>몰입</em>하여 더욱 가치 있게 만드는 사람, jihoon.</p>
+        <p class="role">SOFTWARE ENGINEER · WRITER</p>
       </div>
       <div class="dive-hint" aria-hidden="true">
         <span>DIVE</span>
@@ -748,6 +880,11 @@
         <p class="eyebrow">−25M · DEEP FOCUS</p>
         <h2 class="word">몰입</h2>
         <p class="caption">한 가지에 깊게 잠기는 시간.</p>
+        <p class="log">
+          소프트웨어 엔지니어로 일합니다. 코드로 현실의 문제를 번역하는 일,
+          한 문제에 깊게 잠겨 손에 잡히는 것을 만들어내는 시간을 가장 아낍니다.
+          요즘은 반짝 타오르는 몰입보다 <b>오래 지속되는 몰입의 리듬</b>을 연습하고 있어요.
+        </p>
       </div>
       <a class="orb" href="https://blog.eschocolat.dev" target="_blank" rel="noreferrer" aria-label="블로그 EsLog 열기"
         style="right:14%;top:26%;--bt:7.5s">
@@ -766,7 +903,31 @@
       <div class="inner">
         <p class="eyebrow">−50M · WRITING</p>
         <h2 class="word">기록</h2>
-        <p class="caption">매일, 짧게라도 남기는 글.</p>
+        <p class="caption">매일, 짧게라도 남기는 글. 심해에서 건져 올린 몇 조각.</p>
+        <div class="slips">
+          <a class="slip" href="https://blog.eschocolat.dev/code-is-the-translation-of-reality/" target="_blank"
+            rel="noreferrer" style="--rt:-1.6deg">
+            <strong>코드는 현실의 번역이다</strong>
+            <span class="slip-meta"><span>ESLOG</span><span>읽기 →</span></span>
+          </a>
+          <a class="slip" href="https://blog.eschocolat.dev/the-value-of-taste/" target="_blank" rel="noreferrer"
+            style="--rt:1.4deg">
+            <strong>취향의 쓸모</strong>
+            <span class="slip-meta"><span>ESLOG</span><span>읽기 →</span></span>
+          </a>
+          <a class="slip" href="https://blog.eschocolat.dev/conversation-is-giving-a-place-in-your-heart/"
+            target="_blank" rel="noreferrer" style="--rt:1.8deg">
+            <strong>대화란 상대에게 마음 한 자리를 내어주는 일</strong>
+            <span class="slip-meta"><span>ESLOG</span><span>읽기 →</span></span>
+          </a>
+          <a class="slip" href="https://blog.eschocolat.dev/mindset-for-the-ai-era/" target="_blank" rel="noreferrer"
+            style="--rt:-1.2deg">
+            <strong>AI 시대에 가져야 할 마음</strong>
+            <span class="slip-meta"><span>ESLOG</span><span>읽기 →</span></span>
+          </a>
+        </div>
+        <a class="more" href="https://blog.eschocolat.dev" target="_blank" rel="noreferrer">모든 글 보기 —
+          BLOG.ESCHOCOLAT.DEV →</a>
       </div>
       <a class="orb" href="https://x.com/_eschocolat" target="_blank" rel="noreferrer" aria-label="X 프로필 열기"
         style="left:16%;top:28%;--bt:8.5s">
@@ -786,6 +947,17 @@
         <p class="eyebrow">−75M · TASTE</p>
         <h2 class="word">취향</h2>
         <p class="caption">찾는 것에서, 살아내는 것으로.</p>
+        <p class="log">
+          좋아하는 것을 고르는 데서 멈추지 않고, 직접 만들어 표현해보는 중입니다.
+          요즘 물살에 띄워둔 것들 —
+        </p>
+        <ul class="chips">
+          <li style="--bt:7.5s">지속 가능한 루틴</li>
+          <li class="warm" style="--bt:9s">매일 짧은 글</li>
+          <li style="--bt:8s">균형과 회복의 리듬</li>
+          <li class="warm" style="--bt:10s">만들어서 세상에 내놓기</li>
+          <li style="--bt:8.8s">리스본과 포르투의 기억</li>
+        </ul>
       </div>
       <a class="orb" href="https://www.linkedin.com/in/eschocolat/" target="_blank" rel="noreferrer"
         aria-label="LinkedIn 열기" style="right:17%;top:32%;--bt:9.5s">
