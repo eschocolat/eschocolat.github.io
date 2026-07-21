@@ -1,6 +1,5 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GJMM470ZQ"></script>
@@ -11,1371 +10,232 @@
 
     gtag('config', 'G-3GJMM470ZQ');
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Eschocolat — 아래로, 더 깊이</title>
-  <meta name="description" content="몰입하여 더욱 가치 있게 만드는 사람, jihoon. 아래로, 더 깊이." />
-  <meta name="author" content="Eschocolat" />
-  <meta name="theme-color" content="#071322" />
-  <meta property="og:title" content="Eschocolat — 아래로, 더 깊이" />
-  <meta property="og:description" content="몰입하여 더욱 가치 있게 만드는 사람, jihoon." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.eschocolat.dev" />
-  <meta property="og:image" content="https://www.eschocolat.dev/Eschocolat.png" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@_eschocolat" />
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lee Jihoon — Code, Words &amp; Taste</title>
+  <meta name="description" content="좋은 것을 오래 좋아하고, 깊이 들여다본 것을 직접 만듭니다. 소프트웨어를 만들고 글을 쓰는 이지훈의 개인 공간입니다.">
+  <meta name="author" content="Lee Jihoon">
+  <meta name="theme-color" content="#f2efe6">
+  <meta property="og:title" content="Lee Jihoon — Code, Words &amp; Taste">
+  <meta property="og:description" content="좋은 것을 오래 좋아하고, 깊이 들여다본 것을 직접 만듭니다.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.eschocolat.dev">
+  <meta property="og:image" content="https://www.eschocolat.dev/Eschocolat.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@_eschocolat">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23ff4b4c'/><text x='50' y='69' text-anchor='middle' font-size='58' font-family='serif' fill='%23171717'>E</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Space+Mono:wght@400;700&display=swap"
-    rel="stylesheet">
-  <style>
-    @font-face {
-      font-family: 'Suit';
-      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
-      font-weight: 500;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'Suit';
-      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Bold.woff2') format('woff2');
-      font-weight: 700;
-      font-display: swap;
-    }
-
-    :root {
-      --surface: #0b1e30;
-      --deep: #010409;
-      --foam: #eef6f8;
-      --foam-dim: #9db6c3;
-      --hairline: rgba(238, 246, 248, .14);
-      --coral: #ff4b4c;
-      --coral-soft: #ff8a76;
-      --cyan: #6fd8e0;
-      --serif: 'Gowun Batang', 'Nanum Myeongjo', georgia, serif;
-      --sans: 'Suit', ui-sans-serif, system-ui, -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
-      --mono: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
-    }
-
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: var(--surface);
-      color: var(--foam);
-      font-family: var(--sans);
-      font-weight: 500;
-      line-height: 1.7;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button {
-      font: inherit;
-      color: inherit;
-      background: none;
-      border: 0;
-      cursor: pointer;
-    }
-
-    ::selection {
-      background: var(--coral);
-      color: var(--deep);
-    }
-
-    :focus-visible {
-      outline: 2px solid var(--coral);
-      outline-offset: 4px;
-      border-radius: 8px;
-    }
-
-    /* ---------- water layers ---------- */
-    .sea {
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      background: linear-gradient(180deg, #10283d 0%, #0b1e30 34%, #061524 68%, #030d19 100%);
-    }
-
-    .sea-deep {
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      background: linear-gradient(180deg, #04101d 0%, #020913 50%, #010409 100%);
-      opacity: 0;
-    }
-
-    .shade {
-      position: fixed;
-      inset: 0;
-      z-index: 1;
-      background: #000;
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    /* god rays near the surface */
-    .rays {
-      position: fixed;
-      inset: -10% -5%;
-      z-index: 1;
-      pointer-events: none;
-      overflow: hidden;
-      filter: blur(26px);
-    }
-
-    .ray {
-      position: absolute;
-      top: -20%;
-      width: 16vw;
-      height: 130%;
-      background: linear-gradient(180deg, rgba(160, 215, 235, .16), rgba(160, 215, 235, .05) 45%, transparent 78%);
-      transform-origin: top center;
-      animation: sway var(--rd, 12s) ease-in-out infinite alternate;
-    }
-
-    .ray:nth-child(1) {
-      left: 12%;
-      transform: rotate(14deg);
-      --rd: 13s;
-    }
-
-    .ray:nth-child(2) {
-      left: 34%;
-      width: 9vw;
-      transform: rotate(9deg);
-      --rd: 17s;
-      animation-delay: -4s;
-    }
-
-    .ray:nth-child(3) {
-      left: 55%;
-      width: 20vw;
-      transform: rotate(17deg);
-      --rd: 15s;
-      animation-delay: -8s;
-    }
-
-    .ray:nth-child(4) {
-      left: 80%;
-      width: 11vw;
-      transform: rotate(11deg);
-      --rd: 19s;
-      animation-delay: -11s;
-    }
-
-    @keyframes sway {
-      from {
-        transform: rotate(8deg) translateX(-2vw);
-      }
-
-      to {
-        transform: rotate(16deg) translateX(2vw);
-      }
-    }
-
-    #water {
-      position: fixed;
-      inset: 0;
-      z-index: 2;
-      pointer-events: none;
-    }
-
-    /* diver's lamp */
-    .lamp {
-      position: fixed;
-      inset: 0;
-      z-index: 30;
-      pointer-events: none;
-      mix-blend-mode: screen;
-      background:
-        radial-gradient(300px circle at var(--mx, 50%) var(--my, 40%), rgba(140, 210, 240, .12), transparent 70%),
-        radial-gradient(680px circle at var(--mx, 50%) var(--my, 40%), rgba(120, 180, 220, .05), transparent 72%);
-      opacity: 0;
-      transition: opacity 1s ease;
-    }
-
-    body.lamp-on .lamp {
-      opacity: 1;
-    }
-
-    /* fine noise to prevent gradient banding */
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: 31;
-      pointer-events: none;
-      opacity: .035;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
-    }
-
-    /* ---------- depth gauge ---------- */
-    .gauge {
-      position: fixed;
-      left: 26px;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 20;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: .16em;
-      color: var(--foam-dim);
-    }
-
-    .gauge .depth {
-      font-size: 17px;
-      font-weight: 700;
-      color: var(--foam);
-      letter-spacing: .08em;
-    }
-
-    .gauge ol {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      border-left: 1px solid var(--hairline);
-      padding-left: 14px;
-    }
-
-    .gauge ol a {
-      position: relative;
-      display: block;
-      transition: color .3s ease;
-    }
-
-    .gauge ol a::before {
-      content: "";
-      position: absolute;
-      left: -17.5px;
-      top: 50%;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      transform: translateY(-50%);
-      background: var(--foam-dim);
-      opacity: .4;
-      transition: background .3s ease, opacity .3s ease, box-shadow .3s ease;
-    }
-
-    .gauge ol a:hover {
-      color: var(--foam);
-    }
-
-    .gauge ol li.on a {
-      color: var(--coral-soft);
-    }
-
-    .gauge ol li.on a::before {
-      background: var(--coral);
-      opacity: 1;
-      box-shadow: 0 0 10px rgba(255, 75, 76, .8);
-    }
-
-    .depth-chip {
-      display: none;
-      position: fixed;
-      top: 18px;
-      right: 18px;
-      z-index: 20;
-      font-family: var(--mono);
-      font-size: 12px;
-      letter-spacing: .12em;
-      color: var(--foam-dim);
-    }
-
-    @media (max-width: 900px) {
-      .gauge {
-        display: none;
-      }
-
-      .depth-chip {
-        display: block;
-      }
-    }
-
-    /* ---------- content ---------- */
-    main {
-      position: relative;
-      z-index: 10;
-    }
-
-    .zone {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 10vh 22px;
-    }
-
-    .inner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      opacity: 0;
-      transform: translateY(30px);
-      filter: blur(6px);
-      transition: opacity 1.1s ease, transform 1.1s cubic-bezier(.22, 1, .36, 1), filter 1.1s ease;
-    }
-
-    .inner.in {
-      opacity: 1;
-      transform: none;
-      filter: none;
-    }
-
-    /* hero */
-    .hero .logo {
-      height: clamp(30px, 5vh, 44px);
-      width: auto;
-      filter: drop-shadow(0 0 26px rgba(255, 75, 76, .35));
-      animation: float 7s ease-in-out infinite alternate;
-    }
-
-    .hero .tagline {
-      font-family: var(--serif);
-      font-weight: 700;
-      font-size: clamp(17px, 2.6vh, 22px);
-      color: var(--foam-dim);
-      margin-top: 22px;
-      word-break: keep-all;
-    }
-
-    .hero .tagline em {
-      font-style: normal;
-      color: var(--foam);
-      text-shadow: 0 0 18px rgba(140, 210, 240, .45);
-    }
-
-    .hero .role {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: .3em;
-      color: var(--foam-dim);
-      margin-top: 18px;
-    }
-
-    .dive-hint {
-      position: absolute;
-      bottom: 5vh;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: .28em;
-      color: var(--foam-dim);
-      opacity: 0;
-      animation: fadeIn 1.4s ease 1.6s forwards;
-    }
-
-    .dive-hint .arr {
-      width: 1px;
-      height: 44px;
-      background: linear-gradient(180deg, transparent, var(--coral));
-      animation: sink 2.2s ease-in-out infinite;
-    }
-
-    @keyframes sink {
-      0% {
-        transform: translateY(-8px);
-        opacity: 0;
-      }
-
-      45% {
-        opacity: 1;
-      }
-
-      100% {
-        transform: translateY(10px);
-        opacity: 0;
-      }
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
-
-    @keyframes float {
-      from {
-        transform: translateY(-6px);
-      }
-
-      to {
-        transform: translateY(6px);
-      }
-    }
-
-    /* depth words */
-    .eyebrow {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: .3em;
-      color: var(--coral-soft);
-      margin-bottom: 3vh;
-    }
-
-    .word {
-      font-family: var(--serif);
-      font-weight: 700;
-      font-size: clamp(80px, 19vw, 190px);
-      line-height: 1.1;
-      color: rgba(238, 246, 248, .05);
-      -webkit-text-stroke: 1px rgba(238, 246, 248, .3);
-      text-shadow: 0 0 60px rgba(111, 216, 224, .12);
-    }
-
-    .caption {
-      font-family: var(--serif);
-      font-size: clamp(14px, 2.1vh, 17px);
-      color: var(--foam-dim);
-      margin-top: 3.2vh;
-      word-break: keep-all;
-    }
-
-    /* dive log — short prose under a zone word */
-    .log {
-      max-width: 27rem;
-      margin-top: 3.6vh;
-      font-size: clamp(13.5px, 2vh, 15px);
-      line-height: 1.9;
-      color: var(--foam-dim);
-      word-break: keep-all;
-    }
-
-    .log b {
-      font-weight: 700;
-      color: var(--foam);
-    }
-
-    /* drifting slips — writing cards */
-    .slips {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-      width: min(660px, 92vw);
-      margin-top: 5vh;
-    }
-
-    .slip {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      text-align: left;
-      padding: 18px 20px 15px;
-      border-radius: 12px;
-      border: 1px solid rgba(238, 246, 248, .13);
-      background: rgba(9, 24, 40, .45);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-      transform: rotate(var(--rt, 0deg));
-      transition: transform .35s cubic-bezier(.22, 1, .36, 1), border-color .3s ease, box-shadow .3s ease;
-    }
-
-    .slip strong {
-      font-family: var(--serif);
-      font-weight: 700;
-      font-size: 15.5px;
-      line-height: 1.55;
-      color: var(--foam);
-      word-break: keep-all;
-    }
-
-    .slip .slip-meta {
-      display: flex;
-      justify-content: space-between;
-      font-family: var(--mono);
-      font-size: 9.5px;
-      letter-spacing: .2em;
-      color: var(--foam-dim);
-    }
-
-    .slip:hover,
-    .slip:focus-visible {
-      transform: rotate(0deg) translateY(-4px);
-      border-color: rgba(255, 75, 76, .5);
-      box-shadow: 0 0 30px rgba(255, 75, 76, .14);
-    }
-
-    .slip:hover .slip-meta {
-      color: var(--coral-soft);
-    }
-
-    .more {
-      display: inline-block;
-      margin-top: 3.4vh;
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: .14em;
-      color: var(--foam-dim);
-      border-bottom: 1px solid var(--hairline);
-      padding-bottom: 4px;
-      transition: color .3s ease, border-color .3s ease;
-    }
-
-    .more:hover {
-      color: var(--coral-soft);
-      border-color: rgba(255, 75, 76, .5);
-    }
-
-    /* workbench cards — things in progress */
-    .wips {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 14px;
-      margin-top: 4.6vh;
-    }
-
-    .wip {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 7px;
-      min-width: 150px;
-      padding: 18px 26px 16px;
-      border: 1px dashed rgba(111, 216, 224, .32);
-      border-radius: 14px;
-      background: rgba(111, 216, 224, .04);
-    }
-
-    .wip.done {
-      border-style: solid;
-      border-color: rgba(255, 75, 76, .38);
-      background: rgba(255, 75, 76, .05);
-      box-shadow: 0 0 22px rgba(255, 75, 76, .1);
-    }
-
-    .wip-tag {
-      font-family: var(--mono);
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: .26em;
-      color: var(--cyan);
-    }
-
-    .wip.done .wip-tag {
-      color: var(--coral-soft);
-    }
-
-    .wip strong {
-      font-family: var(--serif);
-      font-weight: 700;
-      font-size: 17px;
-      color: var(--foam);
-    }
-
-    .wip-desc {
-      font-size: 12px;
-      color: var(--foam-dim);
-    }
-
-    /* live dive log — now page excerpt */
-    .now-live {
-      max-width: 30rem;
-      margin-top: 4.2vh;
-      padding-left: 20px;
-      border-left: 1px solid var(--hairline);
-      text-align: left;
-    }
-
-    .now-date {
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: .22em;
-      color: var(--coral-soft);
-    }
-
-    .now-excerpt {
-      margin-top: 12px;
-      font-family: var(--serif);
-      font-size: clamp(14px, 2.1vh, 16px);
-      line-height: 2;
-      color: var(--foam-dim);
-      word-break: keep-all;
-    }
-
-    /* drifting taste chips */
-    .chips {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px 14px;
-      max-width: 560px;
-      margin-top: 4.6vh;
-    }
-
-    .chips li {
-      font-family: var(--serif);
-      font-weight: 700;
-      font-size: 13.5px;
-      color: var(--foam-dim);
-      padding: 9px 18px;
-      border-radius: 999px;
-      border: 1px solid rgba(111, 216, 224, .26);
-      background: rgba(111, 216, 224, .05);
-      box-shadow: 0 0 20px rgba(111, 216, 224, .08);
-      animation: float var(--bt, 8s) ease-in-out infinite alternate;
-      word-break: keep-all;
-    }
-
-    .chips li.warm {
-      border-color: rgba(255, 75, 76, .3);
-      background: rgba(255, 75, 76, .05);
-      box-shadow: 0 0 20px rgba(255, 75, 76, .08);
-    }
-
-    @media (max-width: 640px) {
-      .slips {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* ---------- orbs (bioluminescent links) ---------- */
-    .orb {
-      position: absolute;
-      z-index: 12;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      animation: float var(--bt, 8s) ease-in-out infinite alternate;
-    }
-
-    .orb .core {
-      width: clamp(46px, 7vh, 64px);
-      aspect-ratio: 1;
-      border-radius: 50%;
-      background: radial-gradient(circle at 34% 30%,
-          rgba(255, 255, 255, .95),
-          rgba(255, 138, 118, .9) 22%,
-          rgba(255, 75, 76, .38) 54%,
-          transparent 72%);
-      box-shadow:
-        0 0 26px 6px rgba(255, 75, 76, .3),
-        0 0 80px 22px rgba(255, 75, 76, .12);
-      transition: transform .35s cubic-bezier(.34, 1.56, .64, 1), box-shadow .35s ease;
-    }
-
-    .orb .tag {
-      font-family: var(--mono);
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: .26em;
-      color: var(--foam-dim);
-      transition: color .3s ease, text-shadow .3s ease;
-    }
-
-    .orb:hover .core,
-    .orb:focus-visible .core {
-      transform: scale(1.22);
-      box-shadow:
-        0 0 34px 10px rgba(255, 75, 76, .5),
-        0 0 120px 34px rgba(255, 75, 76, .2);
-    }
-
-    .orb:hover .tag {
-      color: var(--foam);
-      text-shadow: 0 0 14px rgba(255, 138, 118, .6);
-    }
-
-    /* decorative micro-jellies */
-    .jelly {
-      position: absolute;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 40% 35%, rgba(200, 250, 255, .9), rgba(111, 216, 224, .35) 60%, transparent 75%);
-      box-shadow: 0 0 14px 3px rgba(111, 216, 224, .3);
-      animation: float var(--bt, 10s) ease-in-out infinite alternate;
-      pointer-events: none;
-    }
-
-    /* ---------- floor ---------- */
-    .porthole {
-      position: relative;
-      width: clamp(124px, 19vh, 172px);
-      aspect-ratio: 1;
-      border-radius: 50%;
-      margin-bottom: 4vh;
-      animation: float 9s ease-in-out infinite alternate;
-    }
-
-    .porthole img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-      display: block;
-      filter: grayscale(1) brightness(.92) contrast(1.05);
-    }
-
-    /* deep-sea duotone wash over the photo */
-    .porthole::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 50%;
-      background:
-        radial-gradient(circle at 32% 24%, rgba(200, 240, 255, .18), transparent 46%),
-        linear-gradient(180deg, rgba(64, 140, 190, .34), rgba(8, 24, 44, .5));
-      mix-blend-mode: overlay;
-    }
-
-    /* porthole rim + bioluminescent halo */
-    .porthole::after {
-      content: "";
-      position: absolute;
-      inset: -7px;
-      border-radius: 50%;
-      border: 1px solid rgba(238, 246, 248, .28);
-      box-shadow:
-        inset 0 0 0 6px rgba(4, 14, 26, .75),
-        inset 0 0 0 7px rgba(238, 246, 248, .12),
-        0 0 34px 4px rgba(111, 216, 224, .18),
-        0 0 90px 18px rgba(255, 75, 76, .1);
-      pointer-events: none;
-    }
-
-    .floor .msg-title {
-      font-family: var(--serif);
-      font-weight: 700;
-      font-size: clamp(24px, 4.4vh, 36px);
-      word-break: keep-all;
-      text-shadow: 0 0 30px rgba(140, 210, 240, .25);
-    }
-
-    .floor .msg-sub {
-      color: var(--foam-dim);
-      max-width: 30rem;
-      word-break: keep-all;
-      margin-top: 16px;
-      font-size: clamp(13.5px, 2vh, 15.5px);
-    }
-
-    .floor-cta {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 14px;
-      margin-top: 4.4vh;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 700;
-      font-size: 14px;
-      padding: 12px 24px;
-      border-radius: 999px;
-      border: 1px solid var(--hairline);
-      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      border-color: rgba(238, 246, 248, .35);
-    }
-
-    .btn-coral {
-      background: var(--coral);
-      border-color: var(--coral);
-      color: #130607;
-      box-shadow: 0 0 30px rgba(255, 75, 76, .35);
-    }
-
-    .btn-coral:hover {
-      box-shadow: 0 0 44px rgba(255, 75, 76, .5);
-    }
-
-    .floor-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 16px;
-      margin-top: 6vh;
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: .12em;
-      color: var(--foam-dim);
-    }
-
-    .floor-links a:hover {
-      color: var(--coral-soft);
-    }
-
-    .colophon {
-      margin-top: 3vh;
-      font-family: var(--mono);
-      font-size: 10.5px;
-      letter-spacing: .1em;
-      color: rgba(157, 182, 195, .55);
-    }
-
-    /* ---------- bubbles ---------- */
-    .bub {
-      position: fixed;
-      z-index: 15;
-      width: var(--bs, 8px);
-      height: var(--bs, 8px);
-      border-radius: 50%;
-      border: 1px solid rgba(190, 230, 245, .4);
-      background: radial-gradient(circle at 32% 28%, rgba(255, 255, 255, .5), transparent 45%);
-      pointer-events: none;
-      animation: bubbleUp var(--bd, 1.6s) ease-out forwards;
-    }
-
-    @keyframes bubbleUp {
-      0% {
-        transform: translate(0, 0) scale(.6);
-        opacity: 0;
-      }
-
-      12% {
-        opacity: .9;
-      }
-
-      100% {
-        transform: translate(var(--bx, 0px), -46vh) scale(1.15);
-        opacity: 0;
-      }
-    }
-
-    /* ---------- reduced motion ---------- */
-    @media (prefers-reduced-motion: reduce) {
-
-      html {
-        scroll-behavior: auto;
-      }
-
-      .ray,
-      .orb,
-      .jelly,
-      .hero .logo,
-      .porthole,
-      .chips li,
-      .dive-hint .arr {
-        animation: none;
-      }
-
-      .dive-hint {
-        animation: none;
-        opacity: 1;
-      }
-
-      .inner {
-        opacity: 1;
-        transform: none;
-        filter: none;
-        transition: none;
-      }
-
-      .lamp,
-      #water {
-        display: none;
-      }
-
-      .bub {
-        display: none;
-      }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans+KR:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="app.js" defer></script>
 </head>
-
 <body>
-  <div class="sea" aria-hidden="true"></div>
-  <div class="sea-deep" id="seaDeep" aria-hidden="true"></div>
-  <div class="shade" id="shade" aria-hidden="true"></div>
-  <div class="rays" id="rays" aria-hidden="true">
-    <div class="ray"></div>
-    <div class="ray"></div>
-    <div class="ray"></div>
-    <div class="ray"></div>
-  </div>
-  <canvas id="water" aria-hidden="true"></canvas>
-  <div class="lamp" aria-hidden="true"></div>
+  <a class="skip-link" href="#content">본문으로 건너뛰기</a>
 
-  <nav class="gauge" aria-label="수심 이동">
-    <div class="depth" id="depth">0M</div>
-    <ol id="zones">
-      <li class="on"><a href="#surface">수면</a></li>
-      <li><a href="#focus">몰입</a></li>
-      <li><a href="#writing">기록</a></li>
-      <li><a href="#craft">만들기</a></li>
-      <li><a href="#taste">취향</a></li>
-      <li><a href="#now">지금</a></li>
-      <li><a href="#floor">심해</a></li>
-    </ol>
-  </nav>
-  <div class="depth-chip" id="depthChip">0M</div>
+  <header class="masthead" id="top">
+    <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
 
-  <main>
-    <!-- 0m -->
-    <section class="zone hero" id="surface" aria-label="수면 — 소개">
-      <div class="inner in">
-        <img class="logo" src="Eschocolat.png" alt="Eschocolat" />
-        <p class="tagline"><em>몰입</em>하여 더욱 가치 있게 만드는 사람, jihoon.</p>
-        <p class="role">SOFTWARE ENGINEER · WRITER</p>
-      </div>
-      <div class="dive-hint" aria-hidden="true">
-        <span>DIVE</span>
-        <span class="arr"></span>
-      </div>
-    </section>
+    <a class="brand" href="#top" aria-label="Eschocolat 홈">
+      <span class="brand-mark">E</span>
+      <span>
+        <strong>ESCHOCOLAT</strong>
+        <small>LEE JIHOON</small>
+      </span>
+    </a>
 
-    <!-- -20m -->
-    <section class="zone" id="focus" aria-label="몰입">
-      <div class="inner">
-        <p class="eyebrow">−20M · DEEP FOCUS</p>
-        <h2 class="word">몰입</h2>
-        <p class="caption">한 가지에 깊게 잠기는 시간.</p>
-        <p class="log">
-          소프트웨어 엔지니어로 일합니다. 코드로 현실의 문제를 번역하는 일,
-          한 문제에 깊게 잠겨 손에 잡히는 것을 만들어내는 시간을 가장 아낍니다.
-          요즘은 반짝 타오르는 몰입보다 <b>오래 지속되는 몰입의 리듬</b>을 연습하고 있어요.
-        </p>
-      </div>
-      <a class="orb" href="https://blog.eschocolat.dev" target="_blank" rel="noreferrer" aria-label="블로그 EsLog 열기"
-        style="right:14%;top:26%;--bt:7.5s">
-        <span class="core" aria-hidden="true"></span><span class="tag">BLOG</span>
-      </a>
-      <a class="orb" href="https://www.linkedin.com/in/eschocolat/" target="_blank" rel="noreferrer"
-        aria-label="LinkedIn 열기" style="left:12%;top:60%;--bt:9s">
-        <span class="core" aria-hidden="true"></span><span class="tag">LINKEDIN</span>
-      </a>
-      <span class="jelly" style="left:24%;top:22%;--bt:11s" aria-hidden="true"></span>
-      <span class="jelly" style="right:28%;top:72%;--bt:13s" aria-hidden="true"></span>
-    </section>
+    <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="primaryNav">
+      <span>MENU</span>
+      <i aria-hidden="true"></i>
+    </button>
 
-    <!-- -40m -->
-    <section class="zone" id="writing" aria-label="기록">
-      <div class="inner">
-        <p class="eyebrow">−40M · WRITING</p>
-        <h2 class="word">기록</h2>
-        <p class="caption">매일, 짧게라도 남기는 글. 심해에서 건져 올린 몇 조각.</p>
-        <div class="slips">
-          <a class="slip" href="https://blog.eschocolat.dev/code-is-the-translation-of-reality/" target="_blank"
-            rel="noreferrer" style="--rt:-1.6deg">
-            <strong>코드는 현실의 번역이다</strong>
-            <span class="slip-meta"><span>ESLOG</span><span>읽기 →</span></span>
-          </a>
-          <a class="slip" href="https://blog.eschocolat.dev/the-value-of-taste/" target="_blank" rel="noreferrer"
-            style="--rt:1.4deg">
-            <strong>취향의 쓸모</strong>
-            <span class="slip-meta"><span>ESLOG</span><span>읽기 →</span></span>
-          </a>
-          <a class="slip" href="https://blog.eschocolat.dev/conversation-is-giving-a-place-in-your-heart/"
-            target="_blank" rel="noreferrer" style="--rt:1.8deg">
-            <strong>대화란 상대에게 마음 한 자리를 내어주는 일</strong>
-            <span class="slip-meta"><span>ESLOG</span><span>읽기 →</span></span>
-          </a>
-          <a class="slip" href="https://blog.eschocolat.dev/mindset-for-the-ai-era/" target="_blank" rel="noreferrer"
-            style="--rt:-1.2deg">
-            <strong>AI 시대에 가져야 할 마음</strong>
-            <span class="slip-meta"><span>ESLOG</span><span>읽기 →</span></span>
-          </a>
-        </div>
-        <a class="more" href="https://blog.eschocolat.dev" target="_blank" rel="noreferrer">모든 글 보기 —
-          BLOG.ESCHOCOLAT.DEV →</a>
-      </div>
-      <a class="orb" href="https://x.com/_eschocolat" target="_blank" rel="noreferrer" aria-label="X 프로필 열기"
-        style="left:16%;top:28%;--bt:8.5s">
-        <span class="core" aria-hidden="true"></span><span class="tag">X</span>
-      </a>
-      <span class="jelly" style="right:22%;top:20%;--bt:12s" aria-hidden="true"></span>
-      <span class="jelly" style="left:30%;top:76%;--bt:9.5s" aria-hidden="true"></span>
-    </section>
+    <nav class="primary-nav" id="primaryNav" aria-label="주요 메뉴">
+      <a href="#about"><span>01</span> About</a>
+      <a href="#writing"><span>02</span> Writing</a>
+      <a href="#now"><span>03</span> Now</a>
+      <a href="#contact"><span>04</span> Contact</a>
+    </nav>
 
-    <!-- -60m -->
-    <section class="zone" id="craft" aria-label="만들기">
-      <div class="inner">
-        <p class="eyebrow">−60M · CRAFT</p>
-        <h2 class="word">만들기</h2>
-        <p class="caption">소비하는 취향에서, 직접 만드는 취향으로.</p>
-        <p class="log">
-          생각을 밖으로 꺼내야 비로소 성장한다고 믿게 됐습니다.
-          완벽하지 않아도, 하나씩 아웃풋을 내보는 연습 중 — 지금 작업대 위에 있는 것들.
-        </p>
-        <div class="wips">
-          <div class="wip">
-            <span class="wip-tag">WIP</span>
-            <strong>작은 앱</strong>
-            <span class="wip-desc">아이디어를 실물로</span>
-          </div>
-          <div class="wip">
-            <span class="wip-tag">WIP</span>
-            <strong>유튜브</strong>
-            <span class="wip-desc">취향을 영상으로</span>
-          </div>
-          <div class="wip done">
-            <span class="wip-tag">SHIPPED</span>
-            <strong>이 사이트</strong>
-            <span class="wip-desc">나를 담은 심해</span>
-          </div>
-        </div>
-      </div>
-      <a class="orb" href="https://github.com/eschocolat" target="_blank" rel="noreferrer" aria-label="GitHub 열기"
-        style="right:14%;top:32%;--bt:10s">
-        <span class="core" aria-hidden="true"></span><span class="tag">GITHUB</span>
-      </a>
-      <span class="jelly" style="left:20%;top:26%;--bt:11.5s" aria-hidden="true"></span>
-      <span class="jelly" style="right:30%;top:78%;--bt:13.5s" aria-hidden="true"></span>
-    </section>
+    <p class="availability"><i aria-hidden="true"></i> OPEN TO GOOD CONVERSATIONS</p>
+  </header>
 
-    <!-- -75m -->
-    <section class="zone" id="taste" aria-label="취향">
-      <div class="inner">
-        <p class="eyebrow">−75M · TASTE</p>
-        <h2 class="word">취향</h2>
-        <p class="caption">찾는 것에서, 살아내는 것으로.</p>
-        <p class="log">
-          좋아하는 것을 고르는 데서 멈추지 않고, 직접 만들어 표현해보는 중입니다.
-          요즘 물살에 띄워둔 것들 —
-        </p>
-        <ul class="chips">
-          <li style="--bt:7.5s">지속 가능한 루틴</li>
-          <li class="warm" style="--bt:9s">매일 짧은 글</li>
-          <li style="--bt:8s">균형과 회복의 리듬</li>
-          <li class="warm" style="--bt:10s">만들어서 세상에 내놓기</li>
-          <li style="--bt:8.8s">리스본과 포르투의 기억</li>
-        </ul>
-      </div>
-      <a class="orb" href="mailto:eschocolat.lee@gmail.com" aria-label="이메일 보내기" style="right:15%;top:38%;--bt:7s">
-        <span class="core" aria-hidden="true"></span><span class="tag">MAIL</span>
-      </a>
-      <span class="jelly" style="left:26%;top:24%;--bt:10.5s" aria-hidden="true"></span>
-      <span class="jelly" style="right:30%;top:74%;--bt:14s" aria-hidden="true"></span>
-    </section>
+  <main id="content">
+    <section class="hero" id="about" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <p class="kicker">SOFTWARE ENGINEER · WRITER</p>
+        <h1 id="heroTitle">
+          <span class="line">깊게 보고,</span>
+          <span class="line line-indent">코드로 <em>만들고,</em></span>
+          <span class="line">글로 남깁니다.</span>
+        </h1>
 
-    <!-- -90m -->
-    <section class="zone" id="now" aria-label="지금">
-      <div class="inner">
-        <p class="eyebrow">−90M · NOW</p>
-        <h2 class="word">지금</h2>
-        <p class="caption">이 수심의 물살은 계속 바뀝니다.</p>
-        <div class="now-live">
-          <p class="now-date" id="nowDate">DIVE LOG — 2025. 10. 28.</p>
-          <p class="now-excerpt" id="nowExcerpt">
-            좋아하는 걸 '찾는' 단계에서 '살아내는' 단계로 옮겨가고 있어요.
-            작은 취향들을 일상 속에서 표현하고, 완벽하지 않아도 하나씩 아웃풋을 내보는 연습을 하고 있습니다.
+        <div class="hero-deck">
+          <p>
+            안녕하세요, 이지훈입니다.<br />소프트웨어를 만들고 글을 씁니다.<br />
+            좋아하는 것을 소비하는 데 머물지 않고, 제 방식으로 다시 만들어봅니다.
           </p>
+          <div class="hero-actions">
+            <a class="text-link text-link-strong" href="#writing">글부터 읽기 <span>↘</span></a>
+            <a class="text-link" href="mailto:eschocolat.lee@gmail.com">말 걸기 <span>↗</span></a>
+          </div>
         </div>
-        <a class="more" href="https://blog.eschocolat.dev/now" target="_blank" rel="noreferrer">전체 일지 읽기 — /NOW →</a>
       </div>
-      <a class="orb" href="https://blog.eschocolat.dev/now" target="_blank" rel="noreferrer" aria-label="Now 페이지 열기"
-        style="left:14%;top:34%;--bt:9s">
-        <span class="core" aria-hidden="true"></span><span class="tag">NOW</span>
+
+      <figure class="portrait-card">
+        <div class="portrait-frame">
+          <img src="profile.jpg" alt="창가의 의자에 앉아 생각에 잠긴 이지훈" width="400" height="400">
+          <span class="portrait-stamp" aria-hidden="true">LOVE<br>ANYTHING</span>
+        </div>
+        <figcaption>
+          <span>LEE JIHOON</span>
+        </figcaption>
+      </figure>
+
+      <a class="scroll-cue" href="#practice" aria-label="아래로 이동">
+        <i aria-hidden="true">↓</i>
       </a>
-      <span class="jelly" style="right:24%;top:22%;--bt:12.5s" aria-hidden="true"></span>
-      <span class="jelly" style="left:30%;top:76%;--bt:10s" aria-hidden="true"></span>
     </section>
 
-    <!-- -100m -->
-    <section class="zone floor" id="floor" aria-label="심해 — 연락">
-      <div class="inner">
-        <div class="porthole">
-          <img src="profile.jpg" alt="jihoon의 사진" />
-        </div>
-        <p class="eyebrow">−100M · THE FLOOR</p>
-        <h2 class="msg-title">가장 깊은 곳까지 오셨네요.</h2>
-        <p class="msg-sub">여기까지 잠수해준 분이라면, 이미 반쯤은 친구입니다.
-          글에 대한 감상도, 일 이야기도, 그냥 안부도 좋아요.</p>
-        <div class="floor-cta">
-          <a class="btn btn-coral" href="mailto:eschocolat.lee@gmail.com">말 걸어주세요</a>
-          <button class="btn" id="surfaceUp" type="button">수면으로 ↑</button>
-        </div>
-        <div class="floor-links">
-          <a href="https://blog.eschocolat.dev" target="_blank" rel="noreferrer">Blog</a>
-          <a href="https://blog.eschocolat.dev/now" target="_blank" rel="noreferrer">Now</a>
-          <a href="https://x.com/_eschocolat" target="_blank" rel="noreferrer">X</a>
-          <a href="https://github.com/eschocolat" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/eschocolat/" target="_blank" rel="noreferrer">LinkedIn</a>
-        </div>
-        <p class="colophon">© <span id="year"></span> jihoon · Eschocolat</p>
+    <section class="practice section-shell" id="practice" aria-labelledby="practiceTitle">
+      <div class="section-heading">
+        <p class="section-number">01 / ABOUT</p>
+        <h2 id="practiceTitle">이런 걸<br>하고 지냅니다</h2>
+        <p class="section-note">일과 취미를 딱히 구분하지 않습니다. 좋아하고, 들여다보고, 만드는 순서로 이어질 뿐입니다.</p>
       </div>
+
+      <ol class="practice-list">
+        <li>
+          <span class="practice-no">01</span>
+          <div>
+            <p class="practice-en">LOVE DEEPLY</p>
+            <h3>좋아하다</h3>
+          </div>
+          <p>마음에 들어온 것은 쉽게 넘기지 않습니다. 책이든 음악이든 소프트웨어든, 오래 좋아할 수 있는 쪽을 고릅니다.</p>
+          <span class="practice-arrow" aria-hidden="true">↘</span>
+        </li>
+        <li>
+          <span class="practice-no">02</span>
+          <div>
+            <p class="practice-en">LOOK CLOSER</p>
+            <h3>들여다보다</h3>
+          </div>
+          <p>왜 좋은지, 어떻게 만들어졌는지 끝까지 봅니다. 무엇보다 사람이 세상을 보는 시선에 관심이 많습니다.</p>
+          <span class="practice-arrow" aria-hidden="true">↘</span>
+        </li>
+        <li>
+          <span class="practice-no">03</span>
+          <div>
+            <p class="practice-en">MAKE IT MINE</p>
+            <h3>만들다</h3>
+          </div>
+          <p>본 것을 제 방식으로 다시 만들어봅니다. 아직은 완성한 뒤에야 내놓게 됩니다. 그 간격을 줄이는 게 요즘 과제입니다.</p>
+          <span class="practice-arrow" aria-hidden="true">↘</span>
+        </li>
+      </ol>
+    </section>
+
+    <section class="writing section-shell" id="writing" aria-labelledby="writingTitle">
+      <div class="writing-head">
+        <div>
+          <p class="section-number section-number-light">02 / WRITING</p>
+          <h2 id="writingTitle">최근에<br>쓴 글</h2>
+        </div>
+        <p>글로 정리하기 전까지는 제가 뭘 생각하는지 잘 모릅니다.<br>EsLog에 남긴 최근 네 편입니다.</p>
+      </div>
+
+      <div class="post-list" id="postList" data-content-state="fallback">
+        <a class="post-row" href="https://blog.eschocolat.dev/conversation-is-giving-a-place-in-your-heart/" target="_blank" rel="noreferrer">
+          <span class="post-no">01</span>
+          <span class="post-title">대화란 상대에게 마음 한 자리를 내어주는 일</span>
+          <span class="post-meta">2026.07.05.</span>
+          <span class="post-go" aria-hidden="true">↗</span>
+        </a>
+        <a class="post-row" href="https://blog.eschocolat.dev/the-value-of-taste/" target="_blank" rel="noreferrer">
+          <span class="post-no">02</span>
+          <span class="post-title">취향의 쓸모</span>
+          <span class="post-meta">2026.03.04.</span>
+          <span class="post-go" aria-hidden="true">↗</span>
+        </a>
+        <a class="post-row" href="https://blog.eschocolat.dev/code-is-the-translation-of-reality/" target="_blank" rel="noreferrer">
+          <span class="post-no">03</span>
+          <span class="post-title">코드는 현실의 번역이다</span>
+          <span class="post-meta">2026.01.02.</span>
+          <span class="post-go" aria-hidden="true">↗</span>
+        </a>
+        <a class="post-row" href="https://blog.eschocolat.dev/mindset-for-the-ai-era/" target="_blank" rel="noreferrer">
+          <span class="post-no">04</span>
+          <span class="post-title">AI 시대에 가져야 할 마음</span>
+          <span class="post-meta">2025.12.24.</span>
+          <span class="post-go" aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <a class="all-writing" href="https://blog.eschocolat.dev" target="_blank" rel="noreferrer">
+        <span>모든 글 보러 가기</span>
+        <strong>BLOG.ESCHOCOLAT.DEV ↗</strong>
+      </a>
+    </section>
+
+    <section class="now section-shell" id="now" aria-labelledby="nowTitle">
+      <div class="now-intro">
+        <p class="section-number">03 / NOW</p>
+        <p class="now-status"><i aria-hidden="true"></i> FROM THE /NOW PAGE</p>
+        <h2 id="nowTitle">요즘<br>하는 생각</h2>
+        <p class="now-date" id="nowDate">LAST UPDATED — 2025. 10. 28.</p>
+      </div>
+
+      <div class="now-copy">
+        <p id="nowExcerpt">
+          좋아하는 걸 ‘찾는’ 단계에서 ‘살아내는’ 단계로 옮겨가고 있어요.
+          작은 취향들을 일상에서 표현하고, 완벽하지 않아도 하나씩 아웃풋을 내보는 연습을 하고 있습니다.
+        </p>
+        <a class="text-link text-link-strong" href="https://blog.eschocolat.dev/now" target="_blank" rel="noreferrer">전체 /NOW 읽기 <span>↗</span></a>
+      </div>
+
+      <ul class="workbench" aria-label="현재 관심사">
+        <li><span>01</span><strong>오래 가는 리듬</strong><em>꾸준한 사람보다 돌아오는 사람</em><b>WORK</b></li>
+        <li><span>02</span><strong>매일 쓰기</strong><em>짧아도 매일</em><b>WRITING</b></li>
+        <li><span>03</span><strong>만든 것 공개하기</strong><em>완성 전에 내놓기</em><b>MAKING</b></li>
+      </ul>
+    </section>
+
+    <section class="manifesto" aria-label="개인 문장">
+      <p>LOVE ANYTHING</p>
+      <blockquote>
+        좋은 것을 오래 좋아하고,<br>
+        깊이 들여다본 것을 <em>직접 만듭니다.</em>
+      </blockquote>
     </section>
   </main>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+  <footer class="contact" id="contact">
+    <div class="contact-top">
+      <p class="section-number">04 / CONTACT</p>
+      <p>글에 대한 감상도, 일 이야기도,<br>그냥 안부도 좋습니다.</p>
+    </div>
 
-    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var seaDeep = document.getElementById('seaDeep');
-    var shade = document.getElementById('shade');
-    var rays = document.getElementById('rays');
-    var depthEl = document.getElementById('depth');
-    var depthChip = document.getElementById('depthChip');
-    var zoneItems = Array.prototype.slice.call(document.querySelectorAll('#zones li'));
-    var zoneSecs = ['surface', 'focus', 'writing', 'craft', 'taste', 'now', 'floor'].map(function (id) {
-      return document.getElementById(id);
-    });
+    <a class="contact-mail" href="mailto:eschocolat.lee@gmail.com">
+      <span>LET’S TALK</span>
+      <strong>말 걸어주세요</strong>
+      <i aria-hidden="true">↗</i>
+    </a>
 
-    /* section reveal */
-    var inners = Array.prototype.slice.call(document.querySelectorAll('.inner'));
-    if (reduced || !('IntersectionObserver' in window)) {
-      inners.forEach(function (el) { el.classList.add('in'); });
-    } else {
-      var io = new IntersectionObserver(function (es) {
-        es.forEach(function (e) {
-          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-        });
-      }, { threshold: 0.25 });
-      inners.forEach(function (el) { io.observe(el); });
-    }
+    <div class="contact-bottom">
+      <nav aria-label="외부 링크">
+        <a href="https://blog.eschocolat.dev" target="_blank" rel="noreferrer">BLOG ↗</a>
+        <a href="https://blog.eschocolat.dev/now" target="_blank" rel="noreferrer">NOW ↗</a>
+        <a href="https://github.com/eschocolat" target="_blank" rel="noreferrer">GITHUB ↗</a>
+        <a href="https://www.linkedin.com/in/eschocolat/" target="_blank" rel="noreferrer">LINKEDIN ↗</a>
+        <a href="https://x.com/_eschocolat" target="_blank" rel="noreferrer">X ↗</a>
+      </nav>
+      <p>© <span id="year">2026</span> LEE JIHOON</p>
+      <a class="back-top" href="#top">BACK TO TOP ↑</a>
+    </div>
+  </footer>
 
-    /* depth + atmosphere on scroll */
-    var ticking = false;
-    function onScroll() {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(function () {
-        ticking = false;
-        var max = document.documentElement.scrollHeight - window.innerHeight;
-        var p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
-        var m = Math.round(p * 100);
-        depthEl.textContent = '−' + m + 'M';
-        depthChip.textContent = '−' + m + 'M';
-        if (m === 0) { depthEl.textContent = '0M'; depthChip.textContent = '0M'; }
-        seaDeep.style.opacity = Math.min(1, p * 1.6).toFixed(3);
-        shade.style.opacity = (p * 0.42).toFixed(3);
-        rays.style.opacity = Math.max(0, 1 - p * 2.6).toFixed(3);
-
-        var vh = window.innerHeight;
-        var idx = 0;
-        zoneSecs.forEach(function (s, i) {
-          if (s.getBoundingClientRect().top < vh * 0.5) idx = i;
-        });
-        zoneItems.forEach(function (li, i) { li.classList.toggle('on', i === idx); });
-      });
-    }
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-
-    document.getElementById('surfaceUp').addEventListener('click', function () {
-      window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
-    });
-
-    /* diver's lamp (mouse only) */
-    if (!reduced) {
-      var lampOn = false;
-      window.addEventListener('pointermove', function (e) {
-        if (e.pointerType !== 'mouse') return;
-        if (!lampOn) { lampOn = true; document.body.classList.add('lamp-on'); }
-        document.documentElement.style.setProperty('--mx', (e.clientX / window.innerWidth * 100).toFixed(2) + '%');
-        document.documentElement.style.setProperty('--my', (e.clientY / window.innerHeight * 100).toFixed(2) + '%');
-      });
-    }
-
-    /* click bubbles */
-    if (!reduced) {
-      window.addEventListener('pointerdown', function (e) {
-        var n = 5 + Math.floor(Math.random() * 4);
-        for (var i = 0; i < n; i++) {
-          var b = document.createElement('span');
-          b.className = 'bub';
-          b.style.left = (e.clientX + (Math.random() * 26 - 13)) + 'px';
-          b.style.top = (e.clientY + (Math.random() * 14 - 7)) + 'px';
-          b.style.setProperty('--bs', (4 + Math.random() * 9).toFixed(1) + 'px');
-          b.style.setProperty('--bx', ((Math.random() * 2 - 1) * 60).toFixed(0) + 'px');
-          b.style.setProperty('--bd', (1.3 + Math.random() * 0.9).toFixed(2) + 's');
-          document.body.appendChild(b);
-          b.addEventListener('animationend', function (ev) { ev.currentTarget.remove(); });
-        }
-      });
-    }
-
-    /* live posts — latest writing from EsLog (Ghost Content API).
-       On any failure the hardcoded slips above stay as fallback. */
-    (function () {
-      var grid = document.querySelector('.slips');
-      if (!grid || !window.fetch) return;
-      var API = 'https://blog.eschocolat.dev/ghost/api/content/posts/'
-        + '?key=8ac71b45de92764dc2176bc939'
-        + '&limit=4&fields=title,url&order=published_at%20desc';
-      fetch(API, { headers: { 'Accept-Version': 'v6.0' } })
-        .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
-        .then(function (data) {
-          var posts = (data.posts || []).filter(function (p) { return p.title && p.url; });
-          if (!posts.length) return;
-          var tilts = [-1.6, 1.4, 1.8, -1.2];
-          grid.innerHTML = '';
-          posts.slice(0, 4).forEach(function (p, i) {
-            var a = document.createElement('a');
-            a.className = 'slip';
-            a.href = p.url;
-            a.target = '_blank';
-            a.rel = 'noreferrer';
-            a.style.setProperty('--rt', tilts[i % tilts.length] + 'deg');
-            var t = document.createElement('strong');
-            t.textContent = p.title;
-            var meta = document.createElement('span');
-            meta.className = 'slip-meta';
-            var src = document.createElement('span');
-            src.textContent = 'ESLOG';
-            var go = document.createElement('span');
-            go.textContent = '읽기 →';
-            meta.appendChild(src);
-            meta.appendChild(go);
-            a.appendChild(t);
-            a.appendChild(meta);
-            grid.appendChild(a);
-          });
-        })
-        .catch(function () { /* keep static fallback */ });
-    })();
-
-    /* live dive log — now page excerpt (Ghost Content API).
-       On any failure the static excerpt stays as fallback. */
-    (function () {
-      var ex = document.getElementById('nowExcerpt');
-      var dt = document.getElementById('nowDate');
-      if (!ex || !window.fetch || !window.DOMParser) return;
-      var API = 'https://blog.eschocolat.dev/ghost/api/content/pages/slug/now/'
-        + '?key=8ac71b45de92764dc2176bc939&fields=html,updated_at';
-      fetch(API, { headers: { 'Accept-Version': 'v6.0' } })
-        .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
-        .then(function (data) {
-          var page = (data.pages || [])[0];
-          if (!page || !page.html) return;
-          var doc = new DOMParser().parseFromString(page.html, 'text/html');
-          doc.querySelectorAll('br').forEach(function (br) { br.replaceWith(' '); });
-          var dateLine = '', text = '';
-          doc.querySelectorAll('p').forEach(function (p) {
-            var t = p.textContent.replace(/\s+/g, ' ').trim();
-            if (!t) return;
-            if (!dateLine && /남긴\s*날/.test(t)) { dateLine = t; return; }
-            if (text.length < 160) text += (text ? ' ' : '') + t;
-          });
-          if (text) {
-            ex.textContent = text.length > 175 ? text.slice(0, 175) + '…' : text;
-          }
-          if (dateLine) {
-            dt.textContent = 'DIVE LOG — ' + dateLine.replace(/남긴\s*날\s*[:：]\s*/, '');
-          } else if (page.updated_at) {
-            var d = new Date(page.updated_at);
-            dt.textContent = 'DIVE LOG — ' + d.getFullYear() + '. ' + (d.getMonth() + 1) + '. ' + d.getDate() + '.';
-          }
-        })
-        .catch(function () { /* keep static fallback */ });
-    })();
-
-    /* marine snow + ambient bubbles (canvas) */
-    if (!reduced) {
-      var cv = document.getElementById('water');
-      var ctx = cv.getContext('2d');
-      var W, H, DPR;
-
-      function sizeCv() {
-        DPR = Math.min(window.devicePixelRatio || 1, 2);
-        W = window.innerWidth;
-        H = window.innerHeight;
-        cv.width = W * DPR;
-        cv.height = H * DPR;
-        ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
-      }
-      sizeCv();
-      window.addEventListener('resize', sizeCv);
-
-      /* three parallax layers of snow, positioned in document space */
-      var LAYERS = [
-        { f: 0.25, n: 34, r: [0.5, 1.1], a: [0.05, 0.14], v: 0.05 },
-        { f: 0.55, n: 26, r: [0.8, 1.7], a: [0.08, 0.2], v: 0.09 },
-        { f: 0.95, n: 18, r: [1.2, 2.6], a: [0.12, 0.3], v: 0.14 }
-      ];
-      var snow = [];
-      var DOC = 6; /* world height in viewport units */
-      LAYERS.forEach(function (L, li) {
-        for (var i = 0; i < L.n; i++) {
-          snow.push({
-            li: li,
-            x: Math.random(),
-            y: Math.random() * DOC,
-            r: L.r[0] + Math.random() * (L.r[1] - L.r[0]),
-            a: L.a[0] + Math.random() * (L.a[1] - L.a[0]),
-            ph: Math.random() * Math.PI * 2
-          });
-        }
-      });
-
-      var ambient = [];
-      var frame = 0;
-
-      function waterLoop() {
-        frame++;
-        ctx.clearRect(0, 0, W, H);
-        var sy = window.scrollY;
-
-        for (var i = 0; i < snow.length; i++) {
-          var p = snow[i];
-          var L = LAYERS[p.li];
-          p.y += L.v / H;           /* slow sinking in world space */
-          p.ph += 0.006;
-          var wy = p.y * H - sy * L.f;
-          var sy2 = ((wy % (H + 40)) + (H + 40)) % (H + 40) - 20;
-          var sx = p.x * W + Math.sin(p.ph) * 14;
-          ctx.beginPath();
-          ctx.arc(sx, sy2, p.r, 0, Math.PI * 2);
-          ctx.fillStyle = 'rgba(190, 225, 240,' + (p.a * (0.75 + 0.25 * Math.sin(p.ph * 2.4))).toFixed(3) + ')';
-          ctx.fill();
-        }
-
-        /* ambient bubble columns */
-        if (frame % 110 === 0 && ambient.length < 14) {
-          ambient.push({
-            x: Math.random() * W,
-            y: H + 10,
-            r: 1.6 + Math.random() * 3.4,
-            v: 0.5 + Math.random() * 0.8,
-            ph: Math.random() * Math.PI * 2
-          });
-        }
-        for (var j = ambient.length - 1; j >= 0; j--) {
-          var b = ambient[j];
-          b.y -= b.v;
-          b.ph += 0.02;
-          if (b.y < -12) { ambient.splice(j, 1); continue; }
-          ctx.beginPath();
-          ctx.arc(b.x + Math.sin(b.ph) * 8, b.y, b.r, 0, Math.PI * 2);
-          ctx.strokeStyle = 'rgba(190, 230, 245, .3)';
-          ctx.lineWidth = 1;
-          ctx.stroke();
-        }
-
-        requestAnimationFrame(waterLoop);
-      }
-      waterLoop();
-    }
-  </script>
+  <noscript>
+    <p class="noscript-note">JavaScript가 꺼져 있어도 모든 소개와 기본 글 목록을 읽을 수 있습니다.</p>
+  </noscript>
 </body>
-
 </html>
