@@ -34,7 +34,7 @@ body {
   font-family: var(--sans);
   font-size: 16px;
   line-height: 1.65;
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -304,7 +304,9 @@ ul {
 
 .hero-copy {
   grid-column: 1 / 10;
+  grid-row: 1;
   align-self: center;
+  min-width: 0;
   z-index: 2;
 }
 
@@ -328,11 +330,13 @@ ul {
 
 .hero h1 {
   max-width: 1050px;
+  min-width: 0;
   font-family: var(--serif);
   font-size: clamp(48px, 6.6vw, 112px);
   font-weight: 700;
   letter-spacing: -0.045em;
   line-height: 1.18;
+  overflow-wrap: anywhere;
   word-break: keep-all;
 }
 
@@ -348,16 +352,15 @@ ul {
   position: relative;
   color: var(--red);
   font-style: normal;
+  text-decoration: underline;
+  text-decoration-color: var(--red);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  text-decoration-skip-ink: auto;
 }
 
 .hero h1 em::after {
-  position: absolute;
-  right: -0.04em;
-  bottom: -0.02em;
-  left: -0.02em;
-  height: 0.055em;
-  content: "";
-  background: var(--red);
+  content: none;
 }
 
 .hero-deck {
@@ -405,10 +408,10 @@ ul {
 
 .portrait-card {
   grid-column: 9 / 13;
-  align-self: start;
+  grid-row: 1;
+  align-self: end;
   justify-self: end;
   width: min(100%, 330px);
-  margin-top: 2vh;
   transform: rotate(2.4deg);
   transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
 }
