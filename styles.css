@@ -354,8 +354,8 @@ ul {
   font-style: normal;
   text-decoration: underline;
   text-decoration-color: var(--red);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
+  text-decoration-thickness: 0.055em;
+  text-underline-offset: 0.12em;
   text-decoration-skip-ink: auto;
 }
 
