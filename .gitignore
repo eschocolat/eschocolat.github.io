@@ -28,6 +28,9 @@ yarn-error.log*
 .env*.local
 .env
 
+# private working notes
+/RESUME-TODO.md
+
 # vercel
 .vercel
 
